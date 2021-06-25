@@ -1,5 +1,8 @@
 <template>
-  <div>haha</div>
+  <div>
+    <div>DatePicker</div>
+    <router-link to="/DatePicker">DatePicker</router-link>
+  </div>
 </template>
 
 <script>
