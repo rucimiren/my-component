@@ -1,28 +1,38 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.use(VueRouter);
+import Base from '@/views/Base/Index.vue'
+
+Vue.use(VueRouter)
+
+// 处理异常问题
+const originalPush = VueRouter.prototype.push
+const originalReplace = VueRouter.prototype.replace
+VueRouter.prototype.push = function (location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+VueRouter.prototype.replace = function (location) {
+  return originalReplace.call(this, location).catch(err => err)
+}
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: '/',
+    name: 'Base',
+    component: Base,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/DatePicker',
+    name: 'DatePicker',
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      import(
+        /* webpackChunkName: "DatePicker" */ '../views/DatePicker/Index.vue'
+      ),
   },
-];
+]
 
 const router = new VueRouter({
   routes,
-});
+})
 
-export default router;
+export default router
