@@ -1,11 +1,16 @@
 <template>
-  <div>你好</div>
+  <div>
+    <DatePicker />
+  </div>
 </template>
 
 <script>
+import DatePicker from '@/views/DatePicker/conponents/DatePicker'
 export default {
   name: 'Index',
-
+  components: {
+    DatePicker,
+  },
   data() {
     return {}
   },
