@@ -20,6 +20,14 @@ const routes = [
     path: '/',
     name: 'Base',
     component: Base,
+    children: [
+      {
+        path: '/',
+        name: '/Utils',
+        component: () =>
+          import(/* webpackChunkName: "Utils" */ '../views/Utils/Index.vue'),
+      },
+    ],
   },
   {
     path: '/DatePicker',
