@@ -1,5 +1,5 @@
 <template>
-  <div class="text-20 p-20">
+  <div class="text-20">
     <div class="mb-10">
       日期格式化：{{ 1624673190000 | formatDate('YYYY.MM.DD HH:mm:ss') }}
     </div>

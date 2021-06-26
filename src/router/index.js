@@ -27,15 +27,15 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "Utils" */ '../views/Utils/Index.vue'),
       },
+      {
+        path: '/DatePicker',
+        name: 'DatePicker',
+        component: () =>
+          import(
+            /* webpackChunkName: "DatePicker" */ '../views/DatePicker/Index.vue'
+          ),
+      },
     ],
-  },
-  {
-    path: '/DatePicker',
-    name: 'DatePicker',
-    component: () =>
-      import(
-        /* webpackChunkName: "DatePicker" */ '../views/DatePicker/Index.vue'
-      ),
   },
 ]
 

@@ -3,7 +3,7 @@
     <input
       v-model="date"
       type="text"
-      class="border-primary border border-solid pl-4 py-4 w-full"
+      class="border-gray-5 border border-solid pl-4 py-4 w-full"
     />
     <div>
       <div class="date">{{ date }}</div>

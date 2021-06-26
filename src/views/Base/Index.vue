@@ -17,7 +17,7 @@
         >{{ v.text }}</router-link
       >
     </div>
-    <div class="flex-1">
+    <div class="flex-1 p-10">
       <router-view></router-view>
     </div>
   </div>
@@ -28,7 +28,10 @@ export default {
   name: 'Index',
   data() {
     return {
-      textList: [{ path: '/', text: '首页' }],
+      textList: [
+        { path: '/', text: '首页' },
+        { path: '/DatePicker', text: '日期选择' },
+      ],
     }
   },
   methods: {},
