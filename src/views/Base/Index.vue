@@ -49,7 +49,7 @@ export default {
 
   mounted() {
     console.log('获得当前地址栏传递参数', getQueryParams())
-    console.log(window.root.$isServer)
+    console.log(window.root)
   },
 
   methods: {},
