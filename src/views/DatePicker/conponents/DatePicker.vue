@@ -23,7 +23,7 @@
           :class="{
             'text-gray-7': dayjs(v).format('M') !== dayjs(date).format('M'),
             'bg-blue-11 text-white':
-              dayjs(v).format('DD') === dayjs(new Date()).format('DD'),
+              dayjs(v).format('MM-DD') === dayjs(date).format('MM-DD'),
           }"
         >
           {{ v | formatDay }}
@@ -64,6 +64,10 @@ export default {
   },
   watch: {
     date(val) {
+      console.log(new Date(val).getTime())
+      if (!new Date(val).getTime()) {
+        return
+      }
       this.dateList = []
       this.getDate(val)
     },
@@ -71,10 +75,11 @@ export default {
   methods: {
     init() {
       this.date = dayjs(new Date()).format('YYYY-MM-DD')
+      // this.date = '1622028698000'
     },
     getDate(val) {
       const date = new Date(val)
-      console.log(dayjs(date).$M)
+      // console.log(dayjs(date).$M)
 
       for (let i = 0; i < 42; i++) {
         this.dateList.push(
