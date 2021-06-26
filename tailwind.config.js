@@ -102,6 +102,7 @@ module.exports = {
     spacing: {
       px: '1px',
       ...sizes(0, 201),
+      '1/7': '14.285714%',
     },
     lineHeight: {
       // 行高 tw-leading-12
