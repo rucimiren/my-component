@@ -1,5 +1,5 @@
 <template>
-  <div class="w-200">
+  <div class="" style="width: 224px">
     <DatePicker />
   </div>
 </template>

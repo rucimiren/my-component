@@ -23,8 +23,8 @@
       </div>
       <div class="flex flex-wrap">
         <div
-          v-for="v in dateList"
-          :key="v"
+          v-for="(v, i) in dateList"
+          :key="v.date"
           class="
             w-1/7
             flex
@@ -35,21 +35,16 @@
           "
           :class="{
             'text-blue-11':
-              dayjs(v).format('YYYY-MM-DD') ===
-                dayjs(new Date()).format('YYYY-MM-DD') &&
-              dayjs(v).format('YYYY-MM-DD') !==
-                dayjs(date).format('YYYY-MM-DD') &&
-              dayjs(v).format('M') === dayjs(date).format('M'),
-            'text-gray-5': dayjs(v).format('M') !== dayjs(date).format('M'),
-            'hover:bg-blue-11 hover:text-white':
-              dayjs(v).format('M') === dayjs(date).format('M'),
-            'bg-blue-11 text-white':
-              dayjs(v).format('YYYY-MM-DD') ===
-              dayjs(date).format('YYYY-MM-DD'),
+              isDateDiff(v.date, new Date()) &&
+              (!valueDate || !isDateDiff(v.date, initDate)) &&
+              isShowMonth(v.date),
+            'text-gray-5': !isShowMonth(v.date),
+            'hover:bg-blue-11 hover:text-white': isShowMonth(v.date),
+            'bg-blue-11 text-white': v.isSelectDate,
           }"
-          @click="selectDate(v)"
+          @click="selectDate(v, i)"
         >
-          {{ v | formatDay }}
+          {{ v.date | formatDay }}
         </div>
       </div>
     </div>
@@ -58,22 +53,20 @@
 
 <script>
 import dayjs from 'dayjs'
+import { formatDate } from '@/utils'
 export default {
   name: 'Datepicker',
   props: {
     value: {
       type: [String, Number, Date],
-      default: () => new Date().getTime() + 24 * 60 * 60 * 1000,
+      // default: () => new Date().getTime() + 24 * 60 * 60 * 1000,
     },
   },
   data() {
     return {
       dayjs,
       valueDate: '',
-      date: new Date(),
-      year: '',
-      month: '',
-      day: '',
+      initDate: new Date(),
       dateList: [],
       weekList: ['日', '一', '二', '三', '四', '五', '六'],
     }
@@ -82,8 +75,14 @@ export default {
     this.init()
   },
   computed: {
-    currentDay() {
+    today() {
       return ''
+    },
+    year() {
+      return dayjs(this.initDate).format('YYYY')
+    },
+    month() {
+      return dayjs(this.initDate).format('M')
     },
   },
   filters: {
@@ -95,7 +94,7 @@ export default {
     value: {
       handler(val) {
         if (!new Date(val).getTime()) return
-        this.date = dayjs(val).format('YYYY-MM-DD')
+        this.initDate = this.valueDate = formatDate(val)
       },
       immediate: true,
     },
@@ -103,48 +102,76 @@ export default {
       handler() {},
       immediate: true,
     },
-    date: {
+    initDate: {
       handler(val) {
         if (!new Date(val).getTime()) return
-        this.valueDate = dayjs(val).format('YYYY-MM-DD')
-        this.year = dayjs(val).format('YYYY')
-        this.month = dayjs(val).format('M')
         this.dateList = []
         this.getDate(val)
       },
       immediate: true,
     },
+    dateList: {
+      handler(val) {
+        const date = val.find(
+          v =>
+            this.isDateDiff(v.date, this.valueDate) && this.isShowMonth(v.date),
+        )
+        date && (date.isSelectDate = true)
+      },
+      deep: true,
+      immediate: true,
+    },
   },
   methods: {
     init() {},
+    // 初始化日期
     getDate(val) {
       const date = new Date(val)
-
       for (let i = 0; i < 42; i++) {
-        this.dateList.push(
-          new Date(`${dayjs(date).format('YYYY-MM')}-1`).getTime() -
+        let json = {
+          date:
+            new Date(`${dayjs(date).format('YYYY-MM')}-1`).getTime() -
             dayjs(`${dayjs(date).format('YYYY-MM')}-1`).$W *
               24 *
               60 *
               60 *
               1000 +
             i * 24 * 60 * 60 * 1000,
-        )
+          isSelectDate: false,
+        }
+        this.dateList.push(json)
       }
     },
+    // 选中日期
     selectDate(v) {
-      dayjs(v).format('M') === dayjs(this.date).format('M') && (this.date = v)
+      this.isShowMonth(v.date) &&
+        (this.valueDate = this.initDate = formatDate(v.date))
     },
+    // 切换月份
     setMonth(v) {
-      this.date = new Date(this.date).setMonth(
-        new Date(this.date).getMonth() + v,
+      this.initDate = new Date(this.initDate).setMonth(
+        new Date(this.initDate).getMonth() + v,
       )
     },
+    // 失去焦点
     blur() {
       if (!this.valueDate) {
+        this.allFalse()
         return
       }
-      this.valueDate = dayjs(this.date).format('YYYY-MM-DD')
+      this.valueDate = formatDate(this.initDate)
+    },
+    // 取消选中
+    allFalse() {
+      this.dateList.forEach(v => (v.isSelectDate = false))
+    },
+    // 是否是展示的月份
+    isShowMonth(date) {
+      return dayjs(date).format('M') === dayjs(this.initDate).format('M')
+    },
+    // 两个日期对比，是否一样
+    isDateDiff(date1, date2) {
+      return formatDate(date1) === formatDate(date2)
     },
   },
 }
