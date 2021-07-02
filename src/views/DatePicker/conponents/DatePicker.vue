@@ -1,12 +1,17 @@
 <template>
-  <div class="w-full relative">
+  <div ref="datePicker" class="w-full relative">
     <input
       v-model="valueDate"
       type="text"
-      class="border-gray-5 border border-solid pl-4 py-4 w-full"
+      class="border-gray-5 border border-solid pl-4 py-4 w-full relative z-10"
       @blur="blur"
+      @focus="focus"
     />
-    <div class="shadow-md mt-10 select-none">
+    <div
+      v-show="isShowDate"
+      class="shadow-md select-none absolute w-full bg-white"
+      :class="isShowDate ? 'dateIn' : 'dateOut'"
+    >
       <!-- 头部切换展示部分 -->
       <div class="flex justify-around border-b border-solid border-gray-5">
         <span class="cursor-pointer" @click="setYear(-1)"> &lt;&lt; </span>
@@ -76,6 +81,7 @@ export default {
       dayjs,
       valueDate: '',
       valueDateCopy: '',
+      isShowDate: false,
       initDate: new Date(),
       dateList: [],
       weekList: ['日', '一', '二', '三', '四', '五', '六'],
@@ -83,6 +89,12 @@ export default {
   },
   created() {
     this.init()
+  },
+  mounted() {
+    window.addEventListener('click', e => {
+      const isContains = this.$refs.datePicker.contains(e.target)
+      !isContains && (this.isShowDate = false)
+    })
   },
   computed: {
     today() {
@@ -104,8 +116,8 @@ export default {
       immediate: true,
     },
     valueDate: {
-      handler(val) {
-        console.log(dayjs(val).isValid(), isNaN(new Date(val).getTime()))
+      handler() {
+        // console.log(dayjs(val).isValid(), isNaN(new Date(val).getTime()))
       },
       immediate: true,
     },
@@ -149,6 +161,7 @@ export default {
     },
     // 选中日期
     selectDate(v) {
+      this.isShowDate = false
       this.isShowMonth(v.date) && this.setDate(v.date)
     },
     // 切换月份
@@ -171,6 +184,9 @@ export default {
         return
       }
       this.valueDateCopy && this.setDate(this.valueDateCopy, 'valueDate')
+    },
+    focus() {
+      this.isShowDate = true
     },
     // 取消选中
     allFalse() {
@@ -202,4 +218,31 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.dateIn {
+  animation: in 0.2s linear forwards;
+}
+.dateOut {
+  animation: out 0.2s linear forwards;
+}
+@keyframes in {
+  0% {
+    // transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    // transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes out {
+  0% {
+    // transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    // transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+</style>
