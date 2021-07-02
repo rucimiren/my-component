@@ -3,7 +3,15 @@
     <input
       v-model="valueDate"
       type="text"
-      class="border-gray-5 border border-solid pl-4 py-4 w-full relative z-10"
+      class="
+        border-gray-5 border border-solid
+        pl-4
+        py-4
+        w-full
+        relative
+        z-10
+        rounded-2
+      "
       @blur="blur"
       @focus="focus"
     />
@@ -13,7 +21,15 @@
       :class="isShowDate ? 'dateIn' : 'dateOut'"
     >
       <!-- 头部切换展示部分 -->
-      <div class="flex justify-around border-b border-solid border-gray-5">
+      <div
+        class="
+          flex
+          justify-around
+          border-b border-solid border-gray-3
+          py-4
+          mb-4
+        "
+      >
         <span class="cursor-pointer" @click="setYear(-1)"> &lt;&lt; </span>
         <span class="cursor-pointer" @click="setMonth(-1)"> &lt; </span>
         <span class="cursor-pointer">{{ year }}年{{ month }}月</span>
@@ -35,30 +51,42 @@
         <div
           v-for="(v, i) in dateList"
           :key="v.date"
-          class="
-            w-1/7
-            flex
-            justify-center
-            items-center
-            cursor-pointer
-            rounded-2
-          "
-          :class="{
-            'text-blue-11':
-              isDateDiff(v.date, new Date()) &&
-              (!valueDate || !isDateDiff(v.date, initDate)) &&
-              isShowMonth(v.date),
-            'text-gray-5': !isShowMonth(v.date),
-            'hover:bg-blue-11 hover:text-white': isShowMonth(v.date),
-            'bg-blue-11 text-white': v.isSelectDate,
-          }"
-          @click="selectDate(v, i)"
+          class="w-1/7 flex justify-center items-center p-2"
         >
-          {{ v.date | formatDate('D') }}
+          <div
+            class="
+              flex
+              w-full
+              justify-center
+              items-center
+              cursor-pointer
+              rounded-2
+            "
+            :class="{
+              'text-blue-11':
+                isDateDiff(v.date, new Date()) &&
+                (!valueDate || !isDateDiff(v.date, initDate)) &&
+                isShowMonth(v.date),
+              'text-gray-5': !isShowMonth(v.date),
+              'hover:bg-blue-11 hover:text-white': isShowMonth(v.date),
+              'bg-blue-11 text-white': v.isSelectDate,
+            }"
+            @click="selectDate(v, i)"
+          >
+            {{ v.date | formatDate('D') }}
+          </div>
         </div>
       </div>
       <!-- 底部工具部分 -->
-      <div class="flex justify-center border-gray-5 border-t border-solid">
+      <div
+        class="
+          flex
+          justify-center
+          border-gray-3 border-t border-solid
+          mt-4
+          py-4
+        "
+      >
         <span class="cursor-pointer" @click="setDate(new Date())">今天</span>
       </div>
     </div>
