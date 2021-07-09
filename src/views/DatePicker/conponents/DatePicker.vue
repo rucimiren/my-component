@@ -81,13 +81,42 @@
       <div
         class="
           flex
-          justify-center
+          justify-around
           border-gray-3 border-t border-solid
           mt-4
           py-4
         "
       >
-        <span class="cursor-pointer" @click="setDate(new Date())">今天</span>
+        <span
+          class="cursor-pointer"
+          @click="
+            () => {
+              setDate(new Date().getTime() - 24 * 60 * 60 * 1000)
+              isShowDate = false
+            }
+          "
+          >昨天</span
+        >
+        <span
+          class="cursor-pointer"
+          @click="
+            () => {
+              setDate(new Date())
+              isShowDate = false
+            }
+          "
+          >今天</span
+        >
+        <span
+          class="cursor-pointer"
+          @click="
+            () => {
+              setDate(new Date().getTime() + 24 * 60 * 60 * 1000)
+              isShowDate = false
+            }
+          "
+          >明天</span
+        >
       </div>
     </div>
   </div>
