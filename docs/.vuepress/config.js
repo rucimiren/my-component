@@ -2,9 +2,12 @@ module.exports = (options, ctx) => {
   console.log('options', options)
   console.log('ctx', ctx)
   return {
-    title: 'Hello VuePress',
-    description: 'Just playing around',
-    lastUpdated: '上次更新',
+    title: '肖强的博客',
+    description: '肖强的博客',
+    base: '/',   // 设置站点根路径
+    dest: './ROOT',  // 设置输出目录
+    port: 8086,
+    head: [],
     configureWebpack: {
       resolve: {
         alias: {
@@ -13,25 +16,46 @@ module.exports = (options, ctx) => {
       }
     },
     themeConfig : {
+      logo: '/logo.jpeg',
+      lastUpdated: '上次更新',
       nav : [
-          { text: '下拉菜单', 
-            items: [
-              { text: '附录：错误码', link: '/error' },
-              { text: '接口定义', link: '/apiword' },
-              { text: '接口定义', link: '/api' },
-            ]
-          },
-          
-          { text: '测试', link: '/views/test/test' },
+        { text: '主页', link: '/' },
+        { text: '指南', link: '/views/guide/' },
+        { text: '下拉菜单', 
+          items: [
+            { text: '附录：错误码', link: '/views/down/error' },
+            { text: '接口定义', link: '/views/down/apiword' },
+            { text: '接口定义', link: '/views/down/api' },
+          ]
+        },
+        
+        { text: '测试', link: '/views/test/' },
+        { text: '介绍', link: '/views/desc/' },
       ],
       sidebar: {
-          '/' : [
-                "/", //指的是根目录的md文件 也就是 README.md 里面的内容
-              "apiword",  
-              "api",
-              "error" ,
-              '/views/test/test'
-          ]
+          '/views/test/' : [
+            {
+              title: '开始',
+              collapsable:  false,
+              path: '/views/test/',
+              children: [
+                {
+                  title: '测试',
+                  path: '/views/test/test',
+                },
+                {
+                  title: '测试1',
+                  path: '/views/test/test1',
+                },
+                {
+                  title: '测试2',
+                  path: '/views/test/test2',
+                },
+              ]
+            }
+          ],
+          '/views/desc/':['/views/desc/']
+
       },
       sidebarDepth : 2
     },
@@ -54,6 +78,9 @@ module.exports = (options, ctx) => {
           const dayjs = require('dayjs')
           return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')
         }
+      }],
+      ['@vuepress/search', {
+        searchMaxSuggestions: 10
       }]
     ]
   }
