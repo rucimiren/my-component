@@ -1,5 +1,7 @@
 <template>
-  <div>123</div>
+  <div class="datePicker">
+    <div class="content">123</div>
+  </div>
 </template>
 <script>
 export default {
@@ -12,4 +14,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.datePicker {
+  .content {
+    color: red;
+    font-size: 40px;
+  }
+}
+</style>
