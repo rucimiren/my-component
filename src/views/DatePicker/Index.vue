@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DatePicker from '@/views/DatePicker/conponents/DatePicker'
+import DatePicker from '@/views/DatePicker/components/DatePicker'
 export default {
   name: 'Index',
   components: {
