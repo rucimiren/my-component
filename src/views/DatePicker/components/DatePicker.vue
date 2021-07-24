@@ -14,4 +14,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.datePicker {
+  .content {
+    color: red;
+    font-size: 40px;
+  }
+}
+</style>
