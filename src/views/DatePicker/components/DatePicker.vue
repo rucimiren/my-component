@@ -149,7 +149,7 @@ export default {
   },
   mounted() {
     window.addEventListener('click', e => {
-      const isContains = this.$refs.datePicker.contains(e.target)
+      const isContains = this.$refs.datePicker?.contains(e.target)
       !isContains && (this.isShowDate = false)
     })
   },
