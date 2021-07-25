@@ -2,6 +2,7 @@
   <div ref="datePicker" class="w-full relative">
     <input
       v-model="valueDate"
+      :placeholder="placeholderTextProp"
       type="text"
       class="
         border-gray-5 border border-solid
@@ -65,7 +66,7 @@
             :class="{
               'text-blue-11':
                 isDateDiff(v.date, new Date()) &&
-                (!valueDate || !isDateDiff(v.date, initDate)) &&
+                (!valueDateCopy || !isDateDiff(v.date, initDate)) &&
                 isShowMonth(v.date),
               'text-gray-5': !isShowMonth(v.date),
               'hover:bg-blue-11 hover:text-white': isShowMonth(v.date),
@@ -128,9 +129,14 @@ import { formatDate } from '@/utils'
 export default {
   name: 'date-picker',
   props: {
-    value: {
-      type: [String, Number, Date],
-      default: () => new Date().getTime() + 24 * 60 * 60 * 1000,
+    value: [String, Number, Date],
+    placeholderText: {
+      type: String,
+      default: '请选择日期',
+    },
+    format: {
+      type: String,
+      validotar: () => {},
     },
   },
   data() {
@@ -142,6 +148,7 @@ export default {
       initDate: new Date(),
       dateList: [],
       weekList: ['日', '一', '二', '三', '四', '五', '六'],
+      placeholderTextProp: '',
     }
   },
   created() {
@@ -154,9 +161,6 @@ export default {
     })
   },
   computed: {
-    today() {
-      return ''
-    },
     year() {
       return formatDate(this.initDate, 'YYYY')
     },
@@ -165,16 +169,20 @@ export default {
     },
   },
   watch: {
-    value: {
+    placeholderText: {
       handler(val) {
-        if (!new Date(val).getTime()) return
-        this.setDate(val)
+        this.placeholderTextProp = val
       },
       immediate: true,
     },
-    valueDate: {
-      handler() {
-        // console.log(dayjs(val).isValid(), isNaN(new Date(val).getTime()))
+    value: {
+      handler(val) {
+        if (!new Date(val).getTime()) return
+        if (this.valueDateCopy) {
+          this.setDate(this.valueDateCopy)
+          return
+        }
+        this.setDate(val)
       },
       immediate: true,
     },
@@ -190,7 +198,8 @@ export default {
       handler(val) {
         const date = val.find(
           v =>
-            this.isDateDiff(v.date, this.valueDate) && this.isShowMonth(v.date),
+            this.isDateDiff(v.date, this.valueDateCopy) &&
+            this.isShowMonth(v.date),
         )
         date && (date.isSelectDate = true)
       },
@@ -206,8 +215,6 @@ export default {
       for (let i = 0; i < 42; i++) {
         let json = {
           date:
-            // new Date(`${formatDate(date, 'YYYY-MM')}-1`).getTime() -
-            // new Date(`${formatDate(date, 'YYYY-MM')}-1`).getDay() *
             dayjs(date).startOf('month').valueOf() -
             dayjs(date).startOf('month').day() * 24 * 60 * 60 * 1000 +
             i * 24 * 60 * 60 * 1000,
@@ -259,15 +266,20 @@ export default {
     },
     // 赋值
     setDate(date, type) {
+      const format = this.format ? this.format : 'YYYY-MM-DD'
       switch (type) {
         case 'valueDate':
-          this.valueDate = this.valueDateCopy = formatDate(date)
+          this.valueDate = formatDate(date, format)
+          this.valueDateCopy = formatDate(date)
+          this.$emit('input', this.valueDate)
           break
         case 'initDate':
           this.initDate = formatDate(date)
           break
         default:
-          this.valueDate = this.valueDateCopy = this.initDate = formatDate(date)
+          this.valueDate = formatDate(date, format)
+          this.valueDateCopy = this.initDate = formatDate(date)
+          this.$emit('input', this.valueDate)
           break
       }
     },
@@ -284,21 +296,17 @@ export default {
 }
 @keyframes in {
   0% {
-    // transform: translateY(-100%);
     opacity: 0;
   }
   100% {
-    // transform: translateY(0%);
     opacity: 1;
   }
 }
 @keyframes out {
   0% {
-    // transform: translateY(0%);
     opacity: 1;
   }
   100% {
-    // transform: translateY(-100%);
     opacity: 0;
   }
 }

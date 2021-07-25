@@ -1,6 +1,24 @@
 <template>
   <div class="" style="width: 224px">
-    <date-picker />
+    <date-picker v-model="date" format="YYYY/MM/DD" />
+    <div
+      class="
+        mt-20
+        cursor-pointer
+        rounded-4
+        w-200
+        h-50
+        bg-primary
+        text-white
+        flex
+        justify-center
+        items-center
+        text-20
+      "
+      @click="handler"
+    >
+      getDate
+    </div>
   </div>
 </template>
 
@@ -8,12 +26,18 @@
 export default {
   name: 'Index',
   data() {
-    return {}
+    return {
+      date: '',
+    }
   },
 
   mounted() {},
 
-  methods: {},
+  methods: {
+    handler() {
+      console.log(this.date)
+    },
+  },
 }
 </script>
 
