@@ -126,7 +126,7 @@
 import dayjs from 'dayjs'
 import { formatDate } from '@/utils'
 export default {
-  name: 'Datepicker',
+  name: 'date-picker',
   props: {
     value: {
       type: [String, Number, Date],

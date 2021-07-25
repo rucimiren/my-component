@@ -5,6 +5,9 @@ import store from './store'
 import './assets/tailwind.css'
 import filters from './filters'
 
+import DatePicker from '@/views/DatePicker/components'
+Vue.use(DatePicker)
+
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })

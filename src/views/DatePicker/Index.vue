@@ -1,16 +1,12 @@
 <template>
   <div class="" style="width: 224px">
-    <DatePicker />
+    <date-picker />
   </div>
 </template>
 
 <script>
-import DatePicker from '@/views/DatePicker/components/DatePicker'
 export default {
   name: 'Index',
-  components: {
-    DatePicker,
-  },
   data() {
     return {}
   },
