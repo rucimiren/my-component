@@ -29,14 +29,6 @@ const routes = [
       },
     ],
   },
-  {
-    path: '/DatePicker',
-    name: 'DatePicker',
-    component: () =>
-      import(
-        /* webpackChunkName: "DatePicker" */ '../views/DatePicker/Index.vue'
-      ),
-  },
 ]
 
 const router = new VueRouter({
