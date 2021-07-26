@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div class="w-200 bg-black-f4">
+    <div class="w-200 h-screen bg-black-f85">
       <router-link
         v-for="v in textList"
         :key="v.text"
@@ -11,8 +11,11 @@
           flex
           justify-center
           items-center
-          hover:text-primary
+          hover:bg-primary
+          text-white
+          border-b border-solid border-black-f45
         "
+        exact-active-class="bg-primary"
         :to="v.path"
         >{{ v.text }}</router-link
       >
