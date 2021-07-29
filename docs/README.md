@@ -1,7 +1,6 @@
 ---
 home: true
 heroImage: /theme.jpg
-# heroText: $site.title
 tagline: 让梦想在指尖上飞舞，让精彩在低调中绽放
 actionText: 快速上手 →
 actionLink: /views/guide/

@@ -34,6 +34,7 @@ export default {
       textList: [
         { path: '/', text: '首页' },
         { path: '/DatePicker', text: '日期选择' },
+        { path: '/SerialAnimation', text: '序列帧动画' },
       ],
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="" style="width: 224px">
+  <div style="width: 224px">
     <date-picker v-model="date" format="YYYY/MM/DD" />
     <div
       class="

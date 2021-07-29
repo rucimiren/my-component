@@ -28,18 +28,18 @@ module.exports = (options, ctx) => {
     themeConfig : {
       logo: '/logo.jpeg',
       lastUpdated: '上次更新',
-      smoothScroll: true,
+      smoothScroll: false,
       nav : [
         { text: '主页', link: '/' },
         { text: '指南', link: '/views/guide/' },
-        { text: '下拉菜单', 
+        { text: '下拉菜单',
           items: [
             { text: '附录：错误码', link: '/views/down/error' },
             { text: '接口定义', link: '/views/down/apiword' },
             { text: '接口定义', link: '/views/down/api' },
           ]
         },
-        
+
         { text: '组件', link: '/views/components/' },
         { text: '介绍', link: '/views/desc/' },
       ],
@@ -55,8 +55,8 @@ module.exports = (options, ctx) => {
                   path: '/views/components/DatePicker',
                 },
                 {
-                  title: '测试1',
-                  path: '/views/components/test1',
+                  title: 'SerialAnimation',
+                  path: '/views/components/SerialAnimation',
                 },
                 {
                   title: '测试2',
@@ -71,7 +71,7 @@ module.exports = (options, ctx) => {
       sidebarDepth : 2
     },
     markdown: {
-      lineNumbers: true, // 行号 (你可以通过配置来为每个代码块显示行号)
+      lineNumbers: false, // 行号 (你可以通过配置来为每个代码块显示行号)
     },
     plugins: [
       'demo-container',

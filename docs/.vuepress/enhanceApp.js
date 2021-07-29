@@ -1,9 +1,9 @@
 import filters from '../../src/filters'
 import DemoBlock from './components/DemoBlock.vue'
-import DatePicker from '../../src/views/DatePicker/components'
+import Xq from '../../src/plugins'
 
 export default ({Vue}) => {
-  Vue.use(DatePicker)
+  Vue.use(Xq)
   Vue.component('DemoBlock', DemoBlock)
   Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])

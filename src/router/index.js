@@ -35,6 +35,14 @@ const routes = [
             /* webpackChunkName: "DatePicker" */ '../views/DatePicker/Index.vue'
           ),
       },
+      {
+        path: '/SerialAnimation',
+        name: 'SerialAnimation',
+        component: () =>
+          import(
+            /* webpackChunkName: "SerialAnimation" */ '../views/SerialAnimation/Index.vue'
+          ),
+      },
     ],
   },
 ]

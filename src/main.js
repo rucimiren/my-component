@@ -2,11 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './assets/tailwind.css'
+import './assets/css/tailwind.css'
 import filters from './filters'
 
-import DatePicker from '@/views/DatePicker/components'
-Vue.use(DatePicker)
+import Xq from './plugins'
+Vue.use(Xq)
 
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
