@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { inputMoney, inputInt, getQueryParams } from '@/utils'
+import { inputMoney, inputInt, getQueryParams } from '../../../utils'
 export default {
   name: 'Utils',
 

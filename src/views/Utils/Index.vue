@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Utils from '@/views/Utils/components/Utils'
+import Utils from './components/Utils'
 export default {
   name: 'Index',
   components: {

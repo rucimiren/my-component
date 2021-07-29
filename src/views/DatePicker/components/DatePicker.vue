@@ -1,5 +1,5 @@
 <template>
-  <div ref="datePicker" class="w-full relative">
+  <div ref="datePicker" class="w-full relative z-50">
     <input
       v-model="valueDate"
       :placeholder="placeholderTextProp"
@@ -13,6 +13,7 @@
         z-10
         rounded-2
       "
+      style="outline-color: #2c68ff"
       @blur="blur"
       @focus="focus"
     />
@@ -125,7 +126,8 @@
 
 <script>
 import dayjs from 'dayjs'
-import { formatDate } from '@/utils'
+// import { formatDate } from '@/utils'
+import { formatDate } from '../../../utils'
 export default {
   name: 'date-picker',
   props: {

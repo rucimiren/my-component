@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = (options, ctx) => {
   console.log('options', options)
   console.log('ctx', ctx)
@@ -5,19 +7,28 @@ module.exports = (options, ctx) => {
     title: '肖强的博客',
     description: '肖强的博客',
     base: '/',   // 设置站点根路径
-    dest: './ROOT',  // 设置输出目录
+    dest: './root',  // 设置输出目录
     port: 8086,
     head: [],
     configureWebpack: {
       resolve: {
+        // 别名配置
         alias: {
           '@alias': 'path/to/some/dir'
         }
       }
     },
+    locales: {
+      // 键名是该语言所属的子路径
+      // 作为特例，默认语言可以使用 '/' 作为其路径。
+      '/': {
+        lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
+      }
+    },
     themeConfig : {
       logo: '/logo.jpeg',
       lastUpdated: '上次更新',
+      smoothScroll: true,
       nav : [
         { text: '主页', link: '/' },
         { text: '指南', link: '/views/guide/' },
@@ -29,27 +40,27 @@ module.exports = (options, ctx) => {
           ]
         },
         
-        { text: '测试', link: '/views/test/' },
+        { text: '组件', link: '/views/components/' },
         { text: '介绍', link: '/views/desc/' },
       ],
       sidebar: {
-          '/views/test/' : [
+          '/views/components/' : [
             {
-              title: '开始',
-              collapsable:  false,
-              path: '/views/test/',
+              title: '快速上手',
+              collapsable:  true,
+              // path: '/views/test/',
               children: [
                 {
-                  title: '测试',
-                  path: '/views/test/test',
+                  title: 'DatePicker',
+                  path: '/views/components/DatePicker',
                 },
                 {
                   title: '测试1',
-                  path: '/views/test/test1',
+                  path: '/views/components/test1',
                 },
                 {
                   title: '测试2',
-                  path: '/views/test/test2',
+                  path: '/views/components/test2',
                 },
               ]
             }
@@ -63,6 +74,7 @@ module.exports = (options, ctx) => {
       lineNumbers: true, // 行号 (你可以通过配置来为每个代码块显示行号)
     },
     plugins: [
+      'demo-container',
         ['@vuepress/active-header-links', {
         sidebarLinkSelector: '.sidebar-link',
         headerAnchorSelector: '.header-anchor'
@@ -81,7 +93,25 @@ module.exports = (options, ctx) => {
       }],
       ['@vuepress/search', {
         searchMaxSuggestions: 10
-      }]
-    ]
+      }],
+      [
+        '@vuepress/register-components',
+        {
+          componentsDir: path.resolve(__dirname, '../../src/views'),
+          /* components: [
+            {
+              name: 'DatePicker',
+              path: path.resolve(__dirname, '../../src/views/DatePicker/components/DatePicker.vue'),
+            }
+          ] */
+        },
+      ],
+    ],
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
+    }
   }
 }
