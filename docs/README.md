@@ -2,7 +2,7 @@
 home: true
 heroImage: /theme.jpg
 tagline: 让梦想在指尖上飞舞，让精彩在低调中绽放
-actionText: 快速上手 →
+actionText: 加油加油 →
 actionLink: /views/guide/
 features:
 - title: 简洁至上
@@ -13,3 +13,4 @@ features:
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2020 （可以根据实际情况写）
 ---
+<div></div>

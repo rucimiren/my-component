@@ -28,7 +28,7 @@ module.exports = (options, ctx) => {
     themeConfig : {
       logo: '/logo.jpeg',
       lastUpdated: '上次更新',
-      smoothScroll: false,
+      smoothScroll: true,
       nav : [
         { text: '主页', link: '/' },
         { text: '指南', link: '/views/guide/' },
@@ -74,7 +74,9 @@ module.exports = (options, ctx) => {
       lineNumbers: false, // 行号 (你可以通过配置来为每个代码块显示行号)
     },
     plugins: [
-      'demo-container',
+      ['demo-container', {
+        component: 'InitDemoBlock'
+      }],
         ['@vuepress/active-header-links', {
         sidebarLinkSelector: '.sidebar-link',
         headerAnchorSelector: '.header-anchor'

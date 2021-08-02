@@ -1,10 +1,10 @@
 import filters from '../../src/filters'
-import DemoBlock from './components/DemoBlock.vue'
+import InitDemoBlock from './components/InitDemoBlock.vue'
 import Xq from '../../src/plugins'
 
 export default ({Vue}) => {
   Vue.use(Xq)
-  Vue.component('DemoBlock', DemoBlock)
+  Vue.component('InitDemoBlock', InitDemoBlock)
   Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])
   })

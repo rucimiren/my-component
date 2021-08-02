@@ -1,11 +1,17 @@
 ## 日期选择组件
 
-::: demo 支持v-model
+<!-- ::: demo 支持v-model
 ```vue
 <DatePicker-Index/>
 ```
 <<< @/src/views/DatePicker/Index.vue
-:::
+::: -->
+
+<InitDemoBlock>
+  <DatePicker-Index/>
+</InitDemoBlock>
+
+<<< @/src/views/DatePicker/Index.vue
 
 
 
