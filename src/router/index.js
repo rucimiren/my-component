@@ -43,6 +43,12 @@ const routes = [
             /* webpackChunkName: "SerialAnimation" */ '../views/SerialAnimation/Index.vue'
           ),
       },
+      {
+        path: '/Icon',
+        name: 'Icon',
+        component: () =>
+          import(/* webpackChunkName: "Icon" */ '../views/Icon/Index.vue'),
+      },
     ],
   },
 ]

@@ -59,8 +59,8 @@ module.exports = (options, ctx) => {
                   path: '/views/components/SerialAnimation',
                 },
                 {
-                  title: '测试2',
-                  path: '/views/components/test2',
+                  title: 'Icon',
+                  path: '/views/components/Icon',
                 },
               ]
             }

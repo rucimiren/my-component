@@ -12,9 +12,7 @@
 </template>
 
 <script>
-import SerialAnimation from './components/SerialAnimation.vue'
 export default {
-  components: { SerialAnimation },
   name: 'ComponentsIndex',
 
   data() {
@@ -27,4 +25,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped></style>

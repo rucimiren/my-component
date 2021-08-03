@@ -2,18 +2,18 @@
  * 放PC端demo的容器，后边的vue、html、js源码代码块会被自动处理
 -->
 <template>
-  <div ref="demo" class="DemoBlock shadow-md">
-    <div class="DemoBlock__view">
+  <div ref="demo" class="InitDemoBlock hover:shadow-lg">
+    <div class="InitDemoBlock__view">
       <slot />
     </div>
 
     <div
       ref="code"
       name="source"
-      class="DemoBlock__code"
+      class="InitDemoBlock__code"
       :style="codeWrapperStyle"
     >
-      <div class="DemoBlock__handler text-14">
+      <div class="InitDemoBlock__handler text-14">
         <button @click="open = !open">
           {{ open ? '隐藏代码' : '显示代码' }}
         </button>
@@ -95,12 +95,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.DemoBlock {
+.InitDemoBlock {
   margin: 30px 0 50px;
+  transition: all 0.4s;
 
   &__view {
     padding: 20px;
-    border: 1px solid rgba(#000, 0.1);
+    border: 1px solid #ebebeb;
   }
 
   &__code {
@@ -125,7 +126,7 @@ export default {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    border: 1px solid rgba(#000, 0.1);
+    border: 1px solid #ebebeb;
     border-top: 0;
     text-align: center;
     background: #fff;
@@ -138,7 +139,7 @@ export default {
       background: none;
       color: rgba(#000, 0.2);
       &:hover {
-        color: #2c68ff;
+        color: #409eff;
       }
       &:first-child {
         text-align: right;
