@@ -1,7 +1,8 @@
 import SerialAnimation from './SerialAnimation.vue'
+import { prefix } from '../prefix'
 
 SerialAnimation.install = Vue => {
-  Vue.component(SerialAnimation.name, SerialAnimation)
+  Vue.component(prefix + SerialAnimation.name, SerialAnimation)
 }
 
 export default SerialAnimation

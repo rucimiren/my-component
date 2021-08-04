@@ -1,4 +1,4 @@
-import filters from '../../src/filters'
+import * as filters from '../../src/filters'
 import InitDemoBlock from './components/InitDemoBlock.vue'
 import xiao from '../../src/plugins'
 import '../../src/assets/iconfont/iconfont.css'

@@ -1,3 +1,1 @@
-import { formatDate, formatCurrency } from '../utils'
-
-export default { formatDate, formatCurrency }
+export { formatDate, formatCurrency } from '../utils'

@@ -1,15 +1,22 @@
 {
-  "name": "my-components",
+  "name": "xiao-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "我是一只小精灵，小精灵，小呀小精灵",
+  "main": "lib/xiao.umd.main.js",
+  "license": "MIT",
+  "keyword": "xiao",
+  "author": "rucimiren",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "doc": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "lib": "vue-cli-service build --target lib --name xiao --dest lib src/plugins/index.js"
   },
   "dependencies": {
+    "@rucimiren/xiao-ui": "^0.1.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9",
     "clipboard-copy": "^4.0.1",
