@@ -1,6 +1,6 @@
 <template>
   <div style="width: 224px">
-    <date-picker v-model="date" format="YYYY/MM/DD" />
+    <xiao-date-picker v-model="date" format="YYYY/MM/DD" />
     <div
       class="
         mt-20

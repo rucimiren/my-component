@@ -4,9 +4,10 @@ import router from './router'
 import store from './store'
 import './assets/css/tailwind.css'
 import filters from './filters'
+import './assets/iconfont/iconfont.css'
 
-import Xq from './plugins'
-Vue.use(Xq)
+import xiao from './plugins'
+Vue.use(xiao)
 
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])

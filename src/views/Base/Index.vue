@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div class="w-200 h-screen bg-black-f85">
+    <div class="w-200 h-screen bg-black-f85 overflow-auto">
       <router-link
         v-for="v in textList"
         :key="v.text"
@@ -20,7 +20,7 @@
         >{{ v.text }}</router-link
       >
     </div>
-    <div class="flex-1 p-10">
+    <div class="flex-1 p-10 h-screen overflow-auto">
       <router-view></router-view>
     </div>
   </div>

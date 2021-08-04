@@ -1,6 +1,6 @@
 <template>
   <div style="width: 300px">
-    <serial-animation
+    <xiao-serial-animation
       :aspectRatio="750 / 520"
       :count="100"
       :diffTime="60"
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'ComponentsIndex',
+  name: 'Index',
 
   data() {
     return {}
