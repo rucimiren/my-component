@@ -1,11 +1,17 @@
-# 序列帧动画
+## 序列帧动画
 
-::: demo 序列帧动画
+<!-- ::: demo 序列帧动画
 ```vue
 <SerialAnimation-Index/>
 ```
 <<< @/src/views/SerialAnimation/Index.vue
-:::
+::: -->
+
+<InitDemoBlock>
+  <SerialAnimation-Index/>
+</InitDemoBlock>
+
+<<< @/src/views/SerialAnimation/Index.vue
 
 
 
