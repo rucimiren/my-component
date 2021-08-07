@@ -47,9 +47,13 @@ module.exports = (options, ctx) => {
           '/views/components/' : [
             {
               title: '快速上手',
-              collapsable:  true,
+              collapsable:  false,
               // path: '/views/test/',
               children: [
+                {
+                  title: '安装',
+                  path: '/views/components/Install',
+                },
                 {
                   title: 'DatePicker',
                   path: '/views/components/DatePicker',

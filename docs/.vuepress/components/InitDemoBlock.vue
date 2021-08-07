@@ -2,7 +2,7 @@
  * 放PC端demo的容器，后边的vue、html、js源码代码块会被自动处理
 -->
 <template>
-  <div ref="demo" class="InitDemoBlock hover:shadow-lg">
+  <div ref="demo" class="InitDemoBlock hover">
     <div class="InitDemoBlock__view">
       <slot />
     </div>
@@ -98,6 +98,12 @@ export default {
 .InitDemoBlock {
   margin: 30px 0 50px;
   transition: all 0.4s;
+
+  &:hover {
+    // box-shadow: 5px 5px 5px rgba(200, 199, 199, 0.8);
+    box-shadow: -5px 0px 5px #2c68ff, 0px -5px 5px #f52f3e, 5px 0px 5px #ff9c00,
+      0px 5px 5px #0ed57d;
+  }
 
   &__view {
     padding: 20px;

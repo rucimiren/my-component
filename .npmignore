@@ -9,6 +9,16 @@ babel.config.js
 *.html
 package-lock.json
 src/
+root/
+.browserslistrc
+.editorconfig
+.nvmrc
+.eslintrc.js
+.prettierrc.js
+postcss.config.js
+tailwind.config copy.js
+tailwind.config.js
+README.copy.md
 
 # 本地开发文件
 .env.local

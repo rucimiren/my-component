@@ -1,16 +1,16 @@
 ---
 home: true
-heroImage: /theme.jpg
+heroImage: /stress.png
 tagline: 让梦想在指尖上飞舞，让精彩在低调中绽放
 actionText: 加油加油 →
-actionLink: /views/guide/
+actionLink: /views/components/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2020 （可以根据实际情况写）
+- title: 加油
+  details: 生活中只有5%的比较精彩，也只有5%的比较痛苦，另外的90%都是在平淡中度过。而人都是被这5%的精彩勾引着，忍受着5%的痛苦，生活在这90%的平淡之中。
+- title: 奋斗
+  details: 生命，需要我们去努力。年轻时，我们要努力锻炼自己的能力，掌握知识、掌握技能、掌握必要的社会经验。机会，需要我们去寻找。让我们鼓起勇气，运用智慧，把握我们生命的每一分钟，创造出一个更加精彩的人生。
+- title: 坚持
+  details: 你如果出色地完成了某件事，那你应该再做一些其他的精彩事儿。不要在前一件事上徘徊太久，想想接下来该做什么。 
+footer: 你要身后有力量，前方有希望，心中有爱，才能走的更远
 ---
 <div></div>
