@@ -6,6 +6,10 @@ import './assets/css/tailwind.css'
 import * as filters from './filters'
 import './assets/iconfont/iconfont.css'
 
+import loading from './plugins/directive/loading'
+
+Vue.use(loading)
+
 // import xiao from './plugins'
 import xiao from '@rucimiren/xiao-ui'
 import '@rucimiren/xiao-ui/lib/xiao.css'

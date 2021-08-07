@@ -36,6 +36,7 @@ export default {
         { path: '/DatePicker', text: '日期选择' },
         { path: '/SerialAnimation', text: '序列帧动画' },
         { path: '/Icon', text: 'Icon' },
+        { path: '/Loading', text: 'Loading' },
       ],
     }
   },
