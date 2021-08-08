@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './assets/css/tailwind.css'
+import './assets/css/index.css'
 import * as filters from './filters'
 import './assets/iconfont/iconfont.css'
 
@@ -10,9 +10,9 @@ import loading from './plugins/directive/loading'
 
 Vue.use(loading)
 
-// import xiao from './plugins'
-import xiao from '@rucimiren/xiao-ui'
-import '@rucimiren/xiao-ui/lib/xiao.css'
+import xiao from './plugins'
+// import xiao from '@rucimiren/xiao-ui'
+// import '@rucimiren/xiao-ui/lib/xiao.css'
 Vue.use(xiao)
 
 Object.keys(filters).forEach(key => {

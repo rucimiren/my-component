@@ -1,4 +1,5 @@
-import Loading from '../Loading/Loading.vue'
+import { getStyle } from '../utils'
+import Loading from '../components/Loading/Loading.vue'
 
 const loadingDirective = {}
 loadingDirective.install = Vue => {
@@ -50,11 +51,3 @@ loadingDirective.install = Vue => {
 }
 
 export default loadingDirective
-
-function getStyle(ele, attrName) {
-  if (window.getComputedStyle != undefined) {
-    return window.getComputedStyle(ele)[attrName]
-  } else {
-    return ele.currentStyle[attrName]
-  }
-}

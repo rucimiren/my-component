@@ -11,7 +11,7 @@
       flex
       justify-center
       items-center
-      zindex
+      z-index-2000
     "
   >
     <Icon name="xiao-icon-loading2" color="white" />
@@ -45,9 +45,3 @@ export default {
   },
 }
 </script>
-
-<style lang="less" scoped>
-.zindex {
-  z-index: 2000;
-}
-</style>

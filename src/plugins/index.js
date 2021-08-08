@@ -1,12 +1,12 @@
-import DatePicker from './DatePicker/DatePicker.vue'
-import SerialAnimation from './SerialAnimation/SerialAnimation.vue'
-import Icon from './Icon/Icon.vue'
+import DatePicker from './components/DatePicker/DatePicker.vue'
+import SerialAnimation from './components/SerialAnimation/SerialAnimation.vue'
+import Icon from './components/Icon/Icon.vue'
 
-import '../assets/css/tailwind.css'
+import '../assets/css/index.css'
 import '../assets/iconfont/iconfont.css'
 import * as filters from '../filters'
 
-import { PREFIX } from './constant'
+import { PREFIX } from './utils/constant'
 const Components = [DatePicker, SerialAnimation, Icon]
 
 const install = Vue => {
