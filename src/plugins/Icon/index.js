@@ -1,8 +1,8 @@
 import Icon from './Icon'
-import { prefix } from '../prefix'
+import { PREFIX } from '../constant'
 
 Icon.install = Vue => {
-  Vue.component(prefix + Icon.name, Icon)
+  Vue.component(PREFIX + Icon.name, Icon)
 }
 
 export default Icon

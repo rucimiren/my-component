@@ -1,8 +1,8 @@
 import DatePicker from './DatePicker'
-import { prefix } from '../prefix'
+import { PREFIX } from '../constant'
 
 DatePicker.install = Vue => {
-  Vue.component(prefix + DatePicker.name, DatePicker)
+  Vue.component(PREFIX + DatePicker.name, DatePicker)
 }
 
 export default DatePicker

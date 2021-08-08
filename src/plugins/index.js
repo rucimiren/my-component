@@ -6,14 +6,14 @@ import '../assets/css/tailwind.css'
 import '../assets/iconfont/iconfont.css'
 import * as filters from '../filters'
 
-import { prefix } from './prefix'
+import { PREFIX } from './constant'
 const Components = [DatePicker, SerialAnimation, Icon]
 
 const install = Vue => {
   if (install.installed) return
 
   Components.forEach(component =>
-    Vue.component(prefix + component.name, component),
+    Vue.component(PREFIX + component.name, component),
   )
 
   Object.keys(filters).forEach(key => {
