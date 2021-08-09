@@ -50,6 +50,21 @@
       >
         show2
       </div>
+      <div
+        class="
+          w-100
+          h-40
+          rounded-4
+          bg-primary
+          text-white
+          flex
+          justify-center
+          items-center
+        "
+        @click="isShow3"
+      >
+        服务
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +77,7 @@ export default {
     return {
       show: false,
       show2: false,
+      show3: null,
     }
   },
   methods: {
@@ -70,6 +86,17 @@ export default {
     },
     isShow2() {
       this.show2 = !this.show2
+    },
+    isShow3() {
+      this.show3 = this.$loading({})
+      const startTime = new Date().getTime()
+      setTimeout(() => {
+        const endTime = new Date().getTime()
+        console.log(endTime - startTime)
+        this.show3.close()
+        const lastTime = new Date().getTime()
+        console.log(lastTime - startTime)
+      }, 5000)
     },
   },
 }

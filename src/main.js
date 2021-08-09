@@ -8,6 +8,9 @@ import './assets/iconfont/iconfont.css'
 
 import loading from './plugins/directive/loading'
 
+import loadingService from './plugins/components/Loading/service'
+Vue.prototype.$loading = loadingService
+
 Vue.use(loading)
 
 import xiao from './plugins'
