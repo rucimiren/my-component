@@ -42,14 +42,22 @@ export default {
       loadingClass: null,
       loadingColor: null,
       loadingBackground: null,
-      // fullscreen: true,
       visible: false,
       loadingCustomClass: '',
+      fullscreen: true,
     }
   },
   computed: {
     loadingStyle() {
+      let position = {}
+      if (this.fullscreen) {
+        position = {
+          position: 'fixed !important',
+        }
+      }
+
       return {
+        ...position,
         background: this.loadingBackground || 'rgba(255, 255, 255, 0.8)',
       }
     },
@@ -61,14 +69,6 @@ export default {
             : '#2C68FF'
           : '',
       }
-    },
-  },
-  methods: {
-    handleAfterLeave() {
-      this.$emit('after-leave')
-    },
-    setText(text) {
-      this.text = text
     },
   },
 }

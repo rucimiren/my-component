@@ -1,4 +1,5 @@
 import loadingVue from './Loading.vue'
+import { getStyle } from '../../utils'
 
 const loadingService = Vue => {
   const LoadingConstructor = Vue.extend(loadingVue)
@@ -10,6 +11,7 @@ const loadingService = Vue => {
       this.$el.parentNode.removeChild(this.$el)
     }
     this.$destroy()
+    fullscreenLoading = null
     this.visible = false
   }
   const Loading = (options = {}) => {
@@ -22,6 +24,12 @@ const loadingService = Vue => {
       data: options,
     })
     let parent = document.body
+    if (options.target) {
+      parent = document.querySelector(options.target)
+      if (getStyle(parent, 'position') === 'static') {
+        parent.style.position = 'relative'
+      }
+    }
 
     parent.appendChild(instance.$el)
 

@@ -40,7 +40,9 @@
     </div>
     <hr class="my-20" />
     <div class="text-14 mb-10">
-      在绑定了v-loading指令的元素上添加xiao-loading-text属性，其值会被渲染为加载文案，并显示在加载图标的下方。类似地，xiao-loading-class、xiao-loading-color和xiao-loading-background属性分别用来设定图标类名、图标色值和背景色值。
+      在绑定了v-loading指令的元素上添加xiao-loading-text属性，其值会被渲染为加载文案，
+      并显示在加载图标的下方。类似地，xiao-loading-class、xiao-loading-color和
+      xiao-loading-background属性分别用来设定图标类名、图标色值和背景色值。
     </div>
     <div class="flex items-center">
       <div

@@ -28,9 +28,7 @@ loadingDirective.install = Vue => {
     parent.appendChild(el.mask)
   }
   Vue.directive('loading', {
-    bind: function (el, binding, vNode) {
-      const vm = vNode.context
-      console.log(vm)
+    bind: function (el, binding) {
       const loadingClass = el.getAttribute('xiao-loading-class')
       const loadingColor = el.getAttribute('xiao-loading-color')
       const loadingBackground = el.getAttribute('xiao-loading-background')
@@ -39,7 +37,7 @@ loadingDirective.install = Vue => {
       const mask = new Mask({
         el: document.createElement('div'),
         data: {
-          // fullscreen: !!binding.modifiers.fullscreen,
+          fullscreen: binding.modifiers.fullscreen,
           loadingClass,
           loadingColor,
           loadingBackground,
