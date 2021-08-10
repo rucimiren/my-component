@@ -6,16 +6,10 @@ import './assets/css/index.css'
 import * as filters from './filters'
 import './assets/iconfont/iconfont.css'
 
-import loading from './plugins/directive/loading'
-
-import loadingService from './plugins/components/Loading/service'
-Vue.prototype.$loading = loadingService
-
-Vue.use(loading)
-
 import xiao from './plugins'
 // import xiao from '@rucimiren/xiao-ui'
 // import '@rucimiren/xiao-ui/lib/xiao.css'
+
 Vue.use(xiao)
 
 Object.keys(filters).forEach(key => {

@@ -1,10 +1,10 @@
-import { getStyle } from '../utils'
-import Loading from '../components/Loading/Loading.vue'
+import { getStyle } from '../../utils'
+import loadingVue from './Loading.vue'
 
 const loadingDirective = {}
 loadingDirective.install = Vue => {
   if (Vue.prototype.$isServer) return
-  const Mask = Vue.extend(Loading)
+  const Mask = Vue.extend(loadingVue)
 
   const toggleLoading = (el, binding) => {
     Vue.nextTick(() => {
