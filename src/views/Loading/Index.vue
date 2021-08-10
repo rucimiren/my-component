@@ -1,39 +1,24 @@
 <template>
-  <div class="">
-    <div
-      v-loading="show"
-      class="w-200 h-200 inline-block bg-primary mr-10"
-      xiao-loading-class="xiao-icon-91jiazai"
-      xiao-loading-text="加载中..."
-      xiao-loading-customClass="customClassXiao"
-    >
-      show
+  <div>
+    <div class="text-14 mb-10">
+      对于自定义指令v-loading只需要绑定Boolean即可。默认状况下，Loading
+      遮罩会插入到绑定元素的子节点，通过添加fullscreen修饰符，可以使遮罩插入至
+      DOM 中的 body 上。
     </div>
-    <div
-      v-loading="show2"
-      xiao-loading-color="white"
-      xiao-loading-text="玩命加载中..."
-      xiao-loading-background="rgba(0,0,0,0.8)"
-      class="w-200 h-200 inline-block bg-error"
-    >
-      show2
-    </div>
-    <div class="flex mt-10">
+    <div class="flex items-center">
       <div
+        v-loading="loading1"
         class="
-          w-100
-          h-40
-          rounded-4
+          w-200
+          h-200
           bg-primary
-          text-white
           flex
           justify-center
           items-center
-          mr-10
+          text-white
         "
-        @click="isShow"
       >
-        show
+        默认样式
       </div>
       <div
         class="
@@ -45,25 +30,45 @@
           flex
           justify-center
           items-center
+          ml-20
+          cursor-pointer
         "
-        @click="isShow2"
+        @click="loading1 = !loading1"
       >
-        show2
+        展示
+      </div>
+    </div>
+    <hr class="my-20" />
+    <div class="text-14 mb-10">
+      在绑定了v-loading指令的元素上添加xiao-loading-text属性，其值会被渲染为加载文案，并显示在加载图标的下方。类似地，xiao-loading-class、xiao-loading-color和xiao-loading-background属性分别用来设定图标类名、图标色值和背景色值。
+    </div>
+    <div class="flex items-center">
+      <div
+        v-loading="loading2"
+        xiao-loading-class="xiao-icon-91jiazai"
+        xiao-loading-text="玩命加载中..."
+        xiao-loading-background="rgba(0,0,0,0.8)"
+        xiao-loading-customClass="customClassXiao"
+        class="w-200 h-200 bg-error flex justify-center items-center text-white"
+      >
+        可配置
       </div>
       <div
         class="
           w-100
           h-40
           rounded-4
-          bg-primary
+          bg-error
           text-white
           flex
           justify-center
           items-center
+          ml-20
+          cursor-pointer
         "
-        @click="isShow3"
+        @click="loading2 = !loading2"
       >
-        服务
+        展示
       </div>
     </div>
   </div>
@@ -75,31 +80,9 @@ export default {
 
   data() {
     return {
-      show: false,
-      show2: false,
-      show3: null,
+      loading1: false,
+      loading2: false,
     }
-  },
-  methods: {
-    isShow() {
-      this.show = !this.show
-    },
-    isShow2() {
-      this.show2 = !this.show2
-    },
-    isShow3() {
-      this.show3 = this.$loading({})
-      const startTime = new Date().getTime()
-      setTimeout(() => {
-        const endTime = new Date().getTime()
-        console.log(endTime - startTime)
-        this.show3.close()
-        const lastTime = new Date().getTime()
-        console.log(lastTime - startTime)
-      }, 5000)
-    },
   },
 }
 </script>
-
-<style lang="less" scoped></style>

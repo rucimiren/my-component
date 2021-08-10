@@ -2,7 +2,7 @@
  * 放PC端demo的容器，后边的vue、html、js源码代码块会被自动处理
 -->
 <template>
-  <div ref="demo" class="InitDemoBlock hover">
+  <div ref="demo" class="InitDemoBlock">
     <div class="InitDemoBlock__view">
       <slot />
     </div>

@@ -66,6 +66,10 @@ module.exports = (options, ctx) => {
                   title: 'Icon',
                   path: '/views/components/Icon',
                 },
+                {
+                  title: 'Loading',
+                  path: '/views/components/Loading',
+                },
               ]
             }
           ],
