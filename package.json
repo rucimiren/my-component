@@ -1,6 +1,6 @@
 {
   "name": "xiao-ui",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "private": false,
   "description": "生活不能等别人来安排，要自已去争取和奋斗；而不论其结果是喜是悲，但可以慰藉的是，你总不枉在这世界上活了一场。",
   "main": "lib/xiao.umd.min.js",
@@ -16,7 +16,7 @@
     "lib": "vue-cli-service build --target lib --name xiao --dest lib src/plugins/index.js"
   },
   "dependencies": {
-    "@rucimiren/xiao-ui": "^0.1.2",
+    "@rucimiren/xiao-ui": "^0.2.1",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9",
     "clipboard-copy": "^4.0.1",

@@ -6,9 +6,9 @@ import './assets/css/index.css'
 import * as filters from './filters'
 import './assets/iconfont/iconfont.css'
 
-import xiao from './plugins'
-// import xiao from '@rucimiren/xiao-ui'
-// import '@rucimiren/xiao-ui/lib/xiao.css'
+// import xiao from './plugins'
+import xiao from '@rucimiren/xiao-ui'
+import '@rucimiren/xiao-ui/lib/xiao.css'
 
 Vue.use(xiao)
 

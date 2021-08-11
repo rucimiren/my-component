@@ -12,4 +12,4 @@ import '@rucimiren/xiao-ui/lib/xiao.css'
 ```
 
 ### 使用
-[参考文档](http://39.107.98.235)
+[参考文档](http://39.107.98.235/views/components/)
