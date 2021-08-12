@@ -1,6 +1,8 @@
 import DatePicker from './components/DatePicker/DatePicker.vue'
 import SerialAnimation from './components/SerialAnimation/SerialAnimation.vue'
 import Icon from './components/Icon/Icon.vue'
+// import Scrollbar from './components/Scrollbar/Scrollbar.vue'
+import Scrollbar from './components/Scrollbar/main'
 
 import loadingDirective from './components/Loading/directive'
 import loadingService from './components/Loading/service'
@@ -10,7 +12,7 @@ import '../assets/iconfont/iconfont.css'
 import * as filters from '../filters'
 
 import { PREFIX } from './utils/constant'
-const Components = [DatePicker, SerialAnimation, Icon]
+const Components = [DatePicker, SerialAnimation, Icon, Scrollbar]
 
 const install = Vue => {
   if (install.installed) return

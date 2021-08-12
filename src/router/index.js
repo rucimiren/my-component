@@ -57,6 +57,14 @@ const routes = [
             /* webpackChunkName: "Loading" */ '../views/Loading/Index.vue'
           ),
       },
+      {
+        path: '/Scrollbar',
+        name: 'Scrollbar',
+        component: () =>
+          import(
+            /* webpackChunkName: "Scrollbar" */ '../views/Scrollbar/Index.vue'
+          ),
+      },
     ],
   },
 ]

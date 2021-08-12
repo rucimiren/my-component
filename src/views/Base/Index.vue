@@ -33,10 +33,11 @@ export default {
     return {
       textList: [
         { path: '/', text: '首页' },
-        { path: '/DatePicker', text: '日期选择' },
-        { path: '/SerialAnimation', text: '序列帧动画' },
+        { path: '/DatePicker', text: 'DatePicker' },
+        { path: '/SerialAnimation', text: 'SerialAnimation' },
         { path: '/Icon', text: 'Icon' },
         { path: '/Loading', text: 'Loading' },
+        { path: '/Scrollbar', text: 'Scrollbar' },
       ],
     }
   },
