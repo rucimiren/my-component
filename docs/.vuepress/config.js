@@ -70,6 +70,10 @@ module.exports = (options, ctx) => {
                   title: 'Loading',
                   path: '/views/components/Loading',
                 },
+                {
+                  title: 'Scrollbar',
+                  path: '/views/components/Scrollbar',
+                },
               ]
             }
           ],

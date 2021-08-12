@@ -1,21 +1,24 @@
 <template>
-  <div class="shadow-2xl" style="width: 500px">
+  <div class="shadow-lg" style="width: 380px">
     <xiao-scrollbar noresize wrap-style="height: 500px;">
-      <div v-for="v in 100" :key="v">{{ v }}</div>
+      <div class="px-15 pb-15">
+        <div class="text-center text-24 font-bold">三字经</div>
+        <div class="text-center text-14 mb-10 text-gray-7">作者：王应麟</div>
+        <div class="text-14">{{ article }}</div>
+      </div>
     </xiao-scrollbar>
   </div>
 </template>
 
 <script>
+import { article } from './article'
 export default {
   name: 'Index',
 
   data() {
-    return {}
+    return {
+      article,
+    }
   },
-
-  mounted() {},
-
-  methods: {},
 }
 </script>
