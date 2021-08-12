@@ -1,7 +1,6 @@
 import { on, off } from './dom'
 import { renderThumbStyle, BAR_MAP } from './utils'
 
-/* istanbul ignore next */
 export default {
   name: 'Bar',
 
@@ -26,12 +25,12 @@ export default {
 
     return (
       <div
-        class={['el-scrollbar__bar', 'is-' + bar.key]}
+        class={['xiao-scrollbar__bar', 'is-' + bar.key]}
         onMousedown={this.clickTrackHandler}
       >
         <div
           ref="thumb"
-          class="el-scrollbar__thumb"
+          class="xiao-scrollbar__thumb"
           onMousedown={this.clickThumbHandler}
           style={renderThumbStyle({ size, move, bar })}
         ></div>
@@ -41,7 +40,6 @@ export default {
 
   methods: {
     clickThumbHandler(e) {
-      // prevent click event of right button
       if (e.ctrlKey || e.button === 2) {
         return
       }

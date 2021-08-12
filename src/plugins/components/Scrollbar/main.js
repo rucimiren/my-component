@@ -57,7 +57,7 @@ export default {
     const view = h(
       this.tag,
       {
-        class: ['el-scrollbar__view', this.viewClass],
+        class: ['xiao-scrollbar__view', this.viewClass],
         style: this.viewStyle,
         ref: 'resize',
       },
@@ -70,8 +70,8 @@ export default {
         onScroll={this.handleScroll}
         class={[
           this.wrapClass,
-          'el-scrollbar__wrap',
-          gutter ? '' : 'el-scrollbar__wrap--hidden-default',
+          'xiao-scrollbar__wrap',
+          gutter ? '' : 'xiao-scrollbar__wrap--hidden-default',
         ]}
       >
         {[view]}
@@ -89,14 +89,14 @@ export default {
       nodes = [
         <div
           ref="wrap"
-          class={[this.wrapClass, 'el-scrollbar__wrap']}
+          class={[this.wrapClass, 'xiao-scrollbar__wrap']}
           style={style}
         >
           {[view]}
         </div>,
       ]
     }
-    return h('div', { class: 'el-scrollbar' }, nodes)
+    return h('div', { class: 'xiao-scrollbar' }, nodes)
   },
 
   methods: {
