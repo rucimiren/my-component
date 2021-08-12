@@ -1,5 +1,6 @@
 import { getStyle } from '../../utils'
 import loadingVue from './Loading.vue'
+import { PREFIX } from '../../utils/constant'
 
 const loadingDirective = {}
 loadingDirective.install = Vue => {
@@ -29,11 +30,11 @@ loadingDirective.install = Vue => {
   }
   Vue.directive('loading', {
     bind: function (el, binding) {
-      const loadingClass = el.getAttribute('xiao-loading-class')
-      const loadingColor = el.getAttribute('xiao-loading-color')
-      const loadingBackground = el.getAttribute('xiao-loading-background')
-      const loadingText = el.getAttribute('xiao-loading-text')
-      const loadingCustomClass = el.getAttribute('xiao-loading-customClass')
+      const loadingClass = el.getAttribute(`${PREFIX}loading-class`)
+      const loadingColor = el.getAttribute(`${PREFIX}loading-color`)
+      const loadingBackground = el.getAttribute(`${PREFIX}loading-background`)
+      const loadingText = el.getAttribute(`${PREFIX}loading-text`)
+      const loadingCustomClass = el.getAttribute(`${PREFIX}loading-customClass`)
       const mask = new Mask({
         el: document.createElement('div'),
         data: {

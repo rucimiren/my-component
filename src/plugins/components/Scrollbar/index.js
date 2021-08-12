@@ -1,5 +1,5 @@
 // import Scrollbar from './Scrollbar'
-import Scrollbar from './main'
+import Scrollbar from './scrollbar'
 import { PREFIX } from '../../utils/constant'
 
 Scrollbar.install = Vue => {

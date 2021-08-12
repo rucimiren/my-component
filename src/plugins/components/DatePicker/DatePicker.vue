@@ -126,7 +126,12 @@
 
 <script>
 import dayjs from 'dayjs'
-import { formatDate } from '../../../filters'
+
+// 格式化日期
+const formatDate = (value, format = 'YYYY-MM-DD') => {
+  if (!value) return ''
+  return dayjs(value).format(format)
+}
 export default {
   name: 'date-picker',
   props: {
@@ -140,9 +145,11 @@ export default {
       validotar: () => {},
     },
   },
+  filters: {
+    formatDate,
+  },
   data() {
     return {
-      dayjs,
       valueDate: '',
       valueDateCopy: '',
       isShowDate: false,
@@ -202,7 +209,7 @@ export default {
             this.isDateDiff(v.date, this.valueDateCopy) &&
             this.isShowMonth(v.date),
         )
-        date && (date.isSelectDate = true)
+        this.valueDate && date && (date.isSelectDate = true)
       },
       deep: true,
       immediate: true,
@@ -246,6 +253,7 @@ export default {
     blur() {
       if (!this.valueDate) {
         this.allFalse()
+        this.setDate('', 'empty')
         return
       }
       this.valueDateCopy && this.setDate(this.valueDateCopy, 'valueDate')
@@ -276,6 +284,9 @@ export default {
           break
         case 'initDate':
           this.initDate = formatDate(date)
+          break
+        case 'empty':
+          this.$emit('input', '')
           break
         default:
           this.valueDate = formatDate(date, format)

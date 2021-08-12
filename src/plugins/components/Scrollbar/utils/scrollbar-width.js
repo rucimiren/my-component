@@ -1,5 +1,5 @@
 import Vue from 'vue'
-
+import { PREFIX } from '../../../utils/constant'
 let scrollBarWidth
 
 export default function () {
@@ -7,7 +7,7 @@ export default function () {
   if (scrollBarWidth !== undefined) return scrollBarWidth
 
   const outer = document.createElement('div')
-  outer.className = 'xiao-scrollbar__wrap'
+  outer.className = `${PREFIX}scrollbar__wrap`
   outer.style.visibility = 'hidden'
   outer.style.width = '100px'
   outer.style.position = 'absolute'

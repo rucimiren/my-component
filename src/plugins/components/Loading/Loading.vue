@@ -20,7 +20,7 @@
     >
       <Icon
         class="text-30"
-        :name="loadingClass ? loadingClass : 'xiao-icon-loading2'"
+        :name="loadingClass ? loadingClass : `${prefix}icon-loading2`"
         :color="loadingColor ? loadingColor : '#2C68FF'"
       />
       <p v-if="loadingText" class="text-14" :style="textStyle">
@@ -32,6 +32,7 @@
 
 <script>
 import Icon from '../Icon/Icon.vue'
+import { PREFIX } from '../../utils/constant'
 export default {
   components: {
     Icon,
@@ -69,6 +70,9 @@ export default {
             : '#2C68FF'
           : '',
       }
+    },
+    prefix() {
+      return PREFIX
     },
   },
 }

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { PREFIX } from '../../utils/constant'
 export default {
   name: 'icon',
   props: {
@@ -19,13 +20,13 @@ export default {
   data() {
     return {
       loadingList: [
-        'xiao-icon-loading1',
-        'xiao-icon-loading2',
-        'xiao-icon-loading3',
-        'xiao-icon-91jiazai',
-        'xiao-icon-Loading',
-        'xiao-icon-loading4',
-        'xiao-icon-loading5',
+        `${PREFIX}icon-loading1`,
+        `${PREFIX}icon-loading2`,
+        `${PREFIX}icon-loading3`,
+        `${PREFIX}icon-91jiazai`,
+        `${PREFIX}icon-Loading`,
+        `${PREFIX}icon-loading4`,
+        `${PREFIX}icon-loading5`,
       ],
     }
   },

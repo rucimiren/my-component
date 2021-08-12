@@ -1,8 +1,9 @@
-import { addResizeListener, removeResizeListener } from './resize-event'
-import scrollbarWidth from './scrollbar-width'
-import { toObject } from './utils'
-import Bar from './bar'
-import './scrollbar.css'
+import { addResizeListener, removeResizeListener } from './utils/resize-event'
+import scrollbarWidth from './utils/scrollbar-width'
+import { toObject } from './utils/utils'
+import { PREFIX } from '../../utils/constant'
+import Bar from './utils/bar'
+import './scrollbar.less'
 
 export default {
   name: 'scrollbar',
@@ -57,7 +58,7 @@ export default {
     const view = h(
       this.tag,
       {
-        class: ['xiao-scrollbar__view', this.viewClass],
+        class: [`${PREFIX}scrollbar__view`, this.viewClass],
         style: this.viewStyle,
         ref: 'resize',
       },
@@ -70,8 +71,8 @@ export default {
         onScroll={this.handleScroll}
         class={[
           this.wrapClass,
-          'xiao-scrollbar__wrap',
-          gutter ? '' : 'xiao-scrollbar__wrap--hidden-default',
+          `${PREFIX}scrollbar__wrap`,
+          gutter ? '' : `${PREFIX}scrollbar__wrap--hidden-default`,
         ]}
       >
         {[view]}
@@ -89,14 +90,14 @@ export default {
       nodes = [
         <div
           ref="wrap"
-          class={[this.wrapClass, 'xiao-scrollbar__wrap']}
+          class={[this.wrapClass, `${PREFIX}scrollbar__wrap`]}
           style={style}
         >
           {[view]}
         </div>,
       ]
     }
-    return h('div', { class: 'xiao-scrollbar' }, nodes)
+    return h('div', { class: `${PREFIX}scrollbar` }, nodes)
   },
 
   methods: {

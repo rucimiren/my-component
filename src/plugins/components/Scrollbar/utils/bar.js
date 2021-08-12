@@ -1,5 +1,6 @@
 import { on, off } from './dom'
 import { renderThumbStyle, BAR_MAP } from './utils'
+import { PREFIX } from '../../../utils/constant'
 
 export default {
   name: 'Bar',
@@ -25,12 +26,12 @@ export default {
 
     return (
       <div
-        class={['xiao-scrollbar__bar', 'is-' + bar.key]}
+        class={[`${PREFIX}scrollbar__bar`, 'is-' + bar.key]}
         onMousedown={this.clickTrackHandler}
       >
         <div
           ref="thumb"
-          class="xiao-scrollbar__thumb"
+          class={`${PREFIX}scrollbar__thumb`}
           onMousedown={this.clickThumbHandler}
           style={renderThumbStyle({ size, move, bar })}
         ></div>
