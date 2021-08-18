@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-lg" style="width: 380px">
+  <div class="shadow-lg">
     <xiao-scrollbar noresize wrap-style="height: 500px;">
       <div class="px-15 pb-15">
         <div class="text-center text-24 font-bold">三字经</div>
