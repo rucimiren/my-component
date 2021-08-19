@@ -1,4 +1,4 @@
-import Icon from './Icon'
+import Icon from './icon'
 import { PREFIX } from '../../utils/constant'
 
 Icon.install = Vue => {

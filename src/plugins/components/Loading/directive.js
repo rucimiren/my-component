@@ -1,5 +1,5 @@
 import { getStyle } from '../../utils'
-import loadingVue from './Loading.vue'
+import loadingVue from './loading.vue'
 import { PREFIX } from '../../utils/constant'
 
 const loadingDirective = {}

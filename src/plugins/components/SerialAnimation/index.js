@@ -1,4 +1,4 @@
-import SerialAnimation from './SerialAnimation.vue'
+import SerialAnimation from './serialAnimation.vue'
 import { PREFIX } from '../../utils/constant'
 
 SerialAnimation.install = Vue => {

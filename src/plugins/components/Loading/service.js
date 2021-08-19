@@ -1,4 +1,4 @@
-import loadingVue from './Loading.vue'
+import loadingVue from './loading.vue'
 import { getStyle } from '../../utils'
 
 const loadingService = Vue => {

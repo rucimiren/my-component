@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Icon from '../Icon/Icon.vue'
+import Icon from '../icon/icon.vue'
 import { PREFIX } from '../../utils/constant'
 export default {
   components: {
