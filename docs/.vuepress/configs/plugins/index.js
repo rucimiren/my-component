@@ -26,7 +26,7 @@ module.exports = [
   [
     '@vuepress/register-components',
     {
-      componentsDir: path.resolve(__dirname, '../../../../src/views'),
+      componentsDir: path.resolve(__dirname, '../../../../src/plugins/demo'),
       /* components: [
         {
           name: 'DatePicker',
