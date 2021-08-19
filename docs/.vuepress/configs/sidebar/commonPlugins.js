@@ -7,7 +7,7 @@ module.exports = {
       children: [
         {
           title: 'dayjs',
-          path: '/views/common/plugins/Dayjs',
+          path: '/views/common/plugins/dayjs',
         },
       ]
     }

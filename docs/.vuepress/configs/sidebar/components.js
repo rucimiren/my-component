@@ -7,27 +7,27 @@ module.exports = {
       children: [
         {
           title: '安装',
-          path: '/views/components/Install',
+          path: '/views/components/install',
         },
         {
-          title: 'DatePicker',
-          path: '/views/components/DatePicker',
+          title: 'datePicker',
+          path: '/views/components/datePicker',
         },
         {
-          title: 'SerialAnimation',
-          path: '/views/components/SerialAnimation',
+          title: 'serialAnimation',
+          path: '/views/components/serialAnimation',
         },
         {
-          title: 'Icon',
-          path: '/views/components/Icon',
+          title: 'icon',
+          path: '/views/components/icon',
         },
         {
-          title: 'Loading',
-          path: '/views/components/Loading',
+          title: 'loading',
+          path: '/views/components/loading',
         },
         {
-          title: 'Scrollbar',
-          path: '/views/components/Scrollbar',
+          title: 'scrollbar',
+          path: '/views/components/scrollbar',
         },
       ]
     }
