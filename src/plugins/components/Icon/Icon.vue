@@ -12,6 +12,7 @@ export default {
       required: true,
     },
     color: String,
+    size: [Number, String],
   },
   data() {
     return {
@@ -33,6 +34,7 @@ export default {
     iconStyle() {
       return {
         color: this.color,
+        fontSize: `${this.size}px`,
       }
     },
   },

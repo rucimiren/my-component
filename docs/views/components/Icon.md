@@ -20,7 +20,8 @@
 
 ## Props
 
-参数	| 说明	| 类型	| 默认值	| 可选值
-:--- | :---| :--- | :--- | :---
+参数	| 说明	| 类型	| 默认值	
+:--- | :---| :--- | :--- 
 name | icon的名称 | string | -
 color | icon的颜色 | string | -
+size | icon的大小，单位px | string/number | 16

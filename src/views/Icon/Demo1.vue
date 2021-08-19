@@ -7,13 +7,9 @@
     <i class="xiao-icon-warning mr-4 text-24 text-warning"></i>
     <hr class="my-10" />
     <p class="my-20">通过组件的方式使用</p>
-    <xiao-icon class="text-24" name="xiao-icon-map-filling" color="red" />
-    <xiao-icon class="text-24" name="xiao-icon-meh-filling" color="#409eff" />
-    <xiao-icon
-      class="text-24"
-      name="xiao-icon-smile"
-      color="rgba(0, 0, 0, 1)"
-    />
+    <xiao-icon size="24" name="xiao-icon-map-filling" color="red" />
+    <xiao-icon :size="size" name="xiao-icon-meh-filling" color="#409eff" />
+    <xiao-icon name="xiao-icon-smile" color="rgba(0, 0, 0, 1)" />
     <xiao-icon
       class="text-24"
       name="xiao-icon-arrow-down-filling"
@@ -29,3 +25,12 @@
     >
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      size: 34,
+    }
+  },
+}
+</script>
