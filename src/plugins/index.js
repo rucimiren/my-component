@@ -6,9 +6,8 @@ import loadingDirective from './components/Loading/directive'
 import loadingService from './components/Loading/service'
 import { PREFIX } from './utils/constant'
 
-// plugins文件夹之外的
-import '../assets/css/index.css'
-import '../assets/iconfont/iconfont.css'
+import './assets/css/index.css'
+import './assets/xiao-icons/xiao-icons.css'
 
 const Components = [DatePicker, SerialAnimation, Icon, Scrollbar]
 

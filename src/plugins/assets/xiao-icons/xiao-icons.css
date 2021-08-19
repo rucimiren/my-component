@@ -1,15 +1,16 @@
 @font-face {
-  font-family: 'iconfont'; /* Project id 2717652 */
-  src: url('iconfont.woff2?t=1628038038736') format('woff2'),
-    url('iconfont.woff?t=1628038038736') format('woff'),
-    url('iconfont.ttf?t=1628038038736') format('truetype');
+  font-family: 'xiao-icons'; /* Project id 2717652 */
+  src: url('xiao-icons.woff2?t=1628038038736') format('woff2'),
+    url('xiao-icons.woff?t=1628038038736') format('woff'),
+    url('xiao-icons.ttf?t=1628038038736') format('truetype');
 }
 
-*,
-.iconfont {
-  font-family: 'iconfont' !important;
+[class*=' xiao-icon-'],
+[class^='xiao-icon-'] {
+  font-family: 'xiao-icons' !important;
   font-size: 16px;
   font-style: normal;
+  display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

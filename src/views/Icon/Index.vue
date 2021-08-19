@@ -45,7 +45,7 @@
 
 <script>
 import clipboardCopy from 'clipboard-copy'
-const xiaoIcon = require('../../assets/iconfont/iconfont.json')
+const xiaoIcon = require('../../plugins/assets/xiao-icons/xiao-icons.json')
 // console.log('iconList', xiaoIcon)
 export default {
   name: 'Index',

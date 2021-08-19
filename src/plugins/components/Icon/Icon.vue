@@ -1,9 +1,5 @@
 <template>
-  <i
-    class="inline-block"
-    :class="{ [name]: true, ['loading']: isLoading }"
-    :style="iconStyle"
-  ></i>
+  <i :class="{ [name]: true, ['loading']: isLoading }" :style="iconStyle"></i>
 </template>
 
 <script>
