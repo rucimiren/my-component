@@ -13,7 +13,7 @@
       class="InitDemoBlock__code"
       :style="codeWrapperStyle"
     >
-      <div class="InitDemoBlock__handler text-14">
+      <div class="InitDemoBlock__handler">
         <button @click="open = !open">
           {{ open ? '隐藏代码' : '显示代码' }}
         </button>
@@ -137,6 +137,7 @@ export default {
     text-align: center;
     background: #fff;
     z-index: 5;
+    font-size: 14px;
 
     button {
       width: calc(100% / 2 - 20px);

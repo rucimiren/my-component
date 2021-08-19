@@ -1,26 +1,16 @@
 <template>
-  <div class="flex">
-    <div class="w-200 h-screen bg-black-f85 overflow-auto">
+  <div class="base">
+    <div class="base__sidebar">
       <router-link
         v-for="v in textList"
         :key="v.text"
-        class="
-          block
-          w-full
-          h-40
-          flex
-          justify-center
-          items-center
-          hover:bg-primary
-          text-white
-          border-b border-solid border-black-f45
-        "
-        exact-active-class="bg-primary"
+        class="base__sidebar__items"
+        exact-active-class="base__sidebar__items-active"
         :to="v.path"
         >{{ v.text }}</router-link
       >
     </div>
-    <div class="flex-1 p-10 h-screen overflow-auto">
+    <div class="base__content">
       <router-view></router-view>
     </div>
   </div>
@@ -45,4 +35,37 @@ export default {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.base {
+  display: flex;
+
+  &__sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow: auto;
+
+    &__items {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+
+      &:hover,
+      &-active {
+        background-color: #2c68ff;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: 10px;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+</style>

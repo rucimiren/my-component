@@ -1,24 +1,7 @@
 <template>
-  <div style="width: 224px">
+  <div class="datePicker">
     <xiao-date-picker v-model="date" format="YYYY/MM/DD" />
-    <div
-      class="
-        mt-20
-        cursor-pointer
-        rounded-4
-        w-200
-        h-50
-        bg-primary
-        text-white
-        flex
-        justify-center
-        items-center
-        text-20
-      "
-      @click="handler"
-    >
-      getDate
-    </div>
+    <div class="datePicker__button" @click="handler">getDate</div>
   </div>
 </template>
 
@@ -41,4 +24,22 @@ export default {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.datePicker {
+  width: 224px;
+
+  &__button {
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    background-color: #2c68ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+}
+</style>
