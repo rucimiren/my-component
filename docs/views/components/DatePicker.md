@@ -8,10 +8,10 @@
 ::: -->
 
 <InitDemoBlock>
-  <DatePicker-Index/>
+  <datePicker-demo/>
 </InitDemoBlock>
 
-<<< @/src/views/DatePicker/Index.vue
+<<< @/src/plugins/demo/datePicker/demo.vue
 
 
 

@@ -3,10 +3,10 @@
 ### 代替浏览器默认的滚动条
 
 <InitDemoBlock>
-  <Scrollbar-Index/>
+  <scrollbar-demo/>
 </InitDemoBlock>
 
-<<< @/src/views/Scrollbar/Index.vue
+<<< @/src/plugins/demo/scrollbar/demo.vue
 
 
 

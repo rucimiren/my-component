@@ -3,18 +3,18 @@
 ### 全部Icon
 
 <InitDemoBlock>
-  <Icon-Index/>
+  <icon-demo/>
 </InitDemoBlock>
 
-<<< @/src/views/Icon/Index.vue
+<<< @/src/plugins/demo/icon/demo.vue
 
 ### 示例2
 
 <InitDemoBlock>
-  <Icon-Demo1/>
+  <icon-demo2/>
 </InitDemoBlock>
 
-<<< @/src/views/Icon/Demo1.vue
+<<< @/src/plugins/demo/icon/demo2.vue
 
 
 

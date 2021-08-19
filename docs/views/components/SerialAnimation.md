@@ -8,10 +8,10 @@
 ::: -->
 
 <InitDemoBlock>
-  <SerialAnimation-Index/>
+  <serialAnimation-demo/>
 </InitDemoBlock>
 
-<<< @/src/views/SerialAnimation/Index.vue
+<<< @/src/plugins/demo/serialAnimation/demo.vue
 
 
 

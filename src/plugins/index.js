@@ -7,7 +7,6 @@ import loadingService from './components/Loading/service'
 import { PREFIX } from './utils/constant'
 
 import './index.less'
-// import './assets/css/index.css'
 
 const Components = [DatePicker, SerialAnimation, Icon, Scrollbar]
 

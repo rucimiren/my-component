@@ -3,18 +3,18 @@
 ### 指令模式
 
 <InitDemoBlock>
-  <Loading-Index/>
+  <loading-demo/>
 </InitDemoBlock>
 
-<<< @/src/views/Loading/Index.vue
+<<< @/src/plugins/demo/loading/demo.vue
 
 ### 服务模式
 
 <InitDemoBlock>
-  <Loading-Demo1/>
+  <loading-demo2/>
 </InitDemoBlock>
 
-<<< @/src/views/Loading/Demo1.vue
+<<< @/src/plugins/demo/loading/demo2.vue
 
 
 
