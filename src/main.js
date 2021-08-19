@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import * as filters from './filters'
 
+// 仅在这里使用，不影响plugins和docs
+import './assets/css/index.css'
+
 import xiao from './plugins'
 // import xiao from '@rucimiren/xiao-ui'
 // import '@rucimiren/xiao-ui/lib/xiao.css'

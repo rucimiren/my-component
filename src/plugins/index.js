@@ -1,7 +1,7 @@
 import DatePicker from './components/datePicker/datePicker.vue'
 import SerialAnimation from './components/serialAnimation/serialAnimation.vue'
 import Icon from './components/icon/icon.vue'
-import Scrollbar from './components/Scrollbar/scrollbar'
+import Scrollbar from './components/scrollbar/scrollbar'
 import loadingDirective from './components/loading/directive'
 import loadingService from './components/loading/service'
 import { PREFIX } from './utils/constant'
