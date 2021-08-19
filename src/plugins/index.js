@@ -8,7 +8,6 @@ import { PREFIX } from './utils/constant'
 
 import './index.less'
 import './assets/css/index.css'
-import './assets/xiao-icons/xiao-icons.css'
 
 const Components = [DatePicker, SerialAnimation, Icon, Scrollbar]
 

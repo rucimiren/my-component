@@ -1,130 +1,97 @@
 <template>
-  <div ref="datePicker" class="w-full relative z-50">
+  <div ref="datePicker" :class="`${prefix}datePicker`">
     <input
       v-model="valueDate"
       :placeholder="placeholderTextProp"
       type="text"
-      class="
-        border-gray-5 border border-solid
-        pl-4
-        py-4
-        w-full
-        relative
-        z-10
-        rounded-2
-      "
-      style="outline-color: #2c68ff"
+      :class="`${prefix}datePicker__input`"
       @blur="blur"
       @focus="focus"
     />
-    <div
-      v-show="isShowDate"
-      class="shadow-md select-none absolute w-full bg-white"
-      :class="isShowDate ? 'dateIn' : 'dateOut'"
-    >
-      <!-- 头部切换展示部分 -->
-      <div
-        class="
-          flex
-          justify-around
-          border-b border-solid border-gray-3
-          py-4
-          mb-4
-        "
-      >
-        <span class="cursor-pointer" @click="setYear(-1)"> &lt;&lt; </span>
-        <span class="cursor-pointer" @click="setMonth(-1)"> &lt; </span>
-        <span class="cursor-pointer">{{ year }}年{{ month }}月</span>
-        <span class="cursor-pointer" @click="setMonth(1)"> &gt; </span>
-        <span class="cursor-pointer" @click="setYear(1)"> &gt;&gt;</span>
-      </div>
-      <!-- 星期部分 -->
-      <div class="flex">
-        <div
-          v-for="v in weekList"
-          :key="v"
-          class="w-1/7 flex justify-center items-center"
-        >
-          {{ v }}
+    <transition name="fade">
+      <div v-show="isShowDate" :class="`${prefix}datePicker__pannel`">
+        <!-- 头部切换展示部分 -->
+        <div :class="`${prefix}datePicker__pannel__set`">
+          <span @click="setYear(-1)"> &lt;&lt; </span>
+          <span @click="setMonth(-1)"> &lt; </span>
+          <span>{{ year }}年{{ month }}月</span>
+          <span @click="setMonth(1)"> &gt; </span>
+          <span @click="setYear(1)"> &gt;&gt;</span>
         </div>
-      </div>
-      <!-- 日期部分 -->
-      <div class="flex flex-wrap">
-        <div
-          v-for="(v, i) in dateList"
-          :key="v.date"
-          class="w-1/7 flex justify-center items-center p-2"
-        >
+        <!-- 星期部分 -->
+        <div :class="`${prefix}datePicker__pannel__week`">
           <div
-            class="
-              flex
-              w-full
-              justify-center
-              items-center
-              cursor-pointer
-              rounded-2
-            "
-            :class="{
-              'text-blue-11':
-                isDateDiff(v.date, new Date()) &&
-                (!valueDateCopy || !isDateDiff(v.date, initDate)) &&
-                isShowMonth(v.date),
-              'text-gray-5': !isShowMonth(v.date),
-              'hover:bg-blue-11 hover:text-white': isShowMonth(v.date),
-              'bg-blue-11 text-white': v.isSelectDate,
-            }"
-            @click="selectDate(v, i)"
+            :class="`${prefix}datePicker__pannel__week__items`"
+            v-for="v in weekList"
+            :key="v"
           >
-            {{ v.date | formatDate('D') }}
+            {{ v }}
           </div>
         </div>
+        <!-- 日期部分 -->
+        <div :class="`${prefix}datePicker__pannel__date`">
+          <div
+            v-for="(v, i) in dateList"
+            :key="v.date"
+            :class="`${prefix}datePicker__pannel__date__content`"
+          >
+            <div
+              :class="{
+                [`${prefix}datePicker__pannel__date__content__items`]: true,
+                [`${prefix}datePicker__pannel__date__content__items-blue`]:
+                  isDateDiff(v.date, new Date()) &&
+                  (!valueDateCopy || !isDateDiff(v.date, initDate)) &&
+                  isShowMonth(v.date),
+                [`${prefix}datePicker__pannel__date__content__items-gray`]:
+                  !isShowMonth(v.date),
+                [`${prefix}datePicker__pannel__date__content__items-hover`]:
+                  isShowMonth(v.date),
+                [`${prefix}datePicker__pannel__date__content__items-active`]:
+                  v.isSelectDate,
+              }"
+              @click="selectDate(v, i)"
+            >
+              {{ v.date | formatDate('D') }}
+            </div>
+          </div>
+        </div>
+        <!-- 底部工具部分 -->
+        <div :class="`${prefix}datePicker__pannel__tools`">
+          <span
+            @click="
+              () => {
+                setDate(new Date().getTime() - 24 * 60 * 60 * 1000)
+                isShowDate = false
+              }
+            "
+            >昨天</span
+          >
+          <span
+            @click="
+              () => {
+                setDate(new Date())
+                isShowDate = false
+              }
+            "
+            >今天</span
+          >
+          <span
+            @click="
+              () => {
+                setDate(new Date().getTime() + 24 * 60 * 60 * 1000)
+                isShowDate = false
+              }
+            "
+            >明天</span
+          >
+        </div>
       </div>
-      <!-- 底部工具部分 -->
-      <div
-        class="
-          flex
-          justify-around
-          border-gray-3 border-t border-solid
-          mt-4
-          py-4
-        "
-      >
-        <span
-          class="cursor-pointer"
-          @click="
-            () => {
-              setDate(new Date().getTime() - 24 * 60 * 60 * 1000)
-              isShowDate = false
-            }
-          "
-          >昨天</span
-        >
-        <span
-          class="cursor-pointer"
-          @click="
-            () => {
-              setDate(new Date())
-              isShowDate = false
-            }
-          "
-          >今天</span
-        >
-        <span
-          class="cursor-pointer"
-          @click="
-            () => {
-              setDate(new Date().getTime() + 24 * 60 * 60 * 1000)
-              isShowDate = false
-            }
-          "
-          >明天</span
-        >
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script>
+import { PREFIX } from '../../utils/constant'
 import dayjs from 'dayjs'
 
 // 格式化日期
@@ -174,6 +141,9 @@ export default {
     },
     month() {
       return formatDate(this.initDate, 'M')
+    },
+    prefix() {
+      return PREFIX
     },
   },
   watch: {
@@ -298,28 +268,3 @@ export default {
   },
 }
 </script>
-
-<style lang="less" scoped>
-.dateIn {
-  animation: in 0.2s linear forwards;
-}
-.dateOut {
-  animation: out 0.2s linear forwards;
-}
-@keyframes in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-</style>

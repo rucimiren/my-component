@@ -1,0 +1,97 @@
+.@{--css-prefix}datePicker {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+
+  &__input {
+    border: 1px solid #d9d9d9;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    border-radius: 2px;
+    outline-color: #2c68ff;
+  }
+
+  &__pannel {
+    user-select: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow);
+
+    &__set {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #f0f0f0;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+
+      & > span:not(:nth-child(3)) {
+        cursor: pointer;
+      }
+    }
+
+    &__week {
+      display: flex;
+
+      &__items {
+        .flex-center();
+        width: 1 / 7 * 100%;
+      }
+    }
+
+    &__date {
+      .flex-wrap();
+
+      &__content {
+        width: 1 / 7 * 100%;
+        .flex-center();
+        padding: 2px;
+
+        &__items {
+          width: 100%;
+          .flex-center();
+          cursor: pointer;
+          border-radius: 2px;
+
+          &-blue {
+            color: #007bff;
+          }
+
+          &-gray {
+            color: #d9d9d9;
+          }
+
+          &-hover:hover {
+            color: white;
+            background-color: #007bff;
+          }
+
+          &-active {
+            color: white;
+            background-color: #007bff;
+          }
+        }
+      }
+    }
+
+    &__tools {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 4px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border-top: 1px solid #f0f0f0;
+
+      & > span {
+        cursor: pointer;
+      }
+    }
+  }
+} // end

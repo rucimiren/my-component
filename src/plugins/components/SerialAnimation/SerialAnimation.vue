@@ -1,10 +1,15 @@
 <template>
-  <div ref="serialAnimation" class="serial-animation" :style="containerStyle">
+  <div
+    ref="serialAnimation"
+    :class="`${prefix}serial-animation`"
+    :style="containerStyle"
+  >
     <img alt="" :src="defaultSrc" />
   </div>
 </template>
 
 <script>
+import { PREFIX } from '../../utils/constant'
 export default {
   name: 'serial-animation',
   props: {
@@ -46,6 +51,9 @@ export default {
       return {
         paddingTop: `calc(100% / ${this.aspectRatio})`,
       }
+    },
+    prefix() {
+      return PREFIX
     },
   },
   methods: {
@@ -95,16 +103,3 @@ export default {
   },
 }
 </script>
-<style lang="less">
-.serial-animation {
-  position: relative;
-  width: 100%;
-  img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
-}
-</style>

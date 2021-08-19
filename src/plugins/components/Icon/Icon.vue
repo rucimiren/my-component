@@ -1,5 +1,8 @@
 <template>
-  <i :class="{ [name]: true, ['loading']: isLoading }" :style="iconStyle"></i>
+  <i
+    :class="{ [name]: true, [`${prefix}icon__loading`]: isLoading }"
+    :style="iconStyle"
+  ></i>
 </template>
 
 <script>
@@ -37,23 +40,11 @@ export default {
         fontSize: `${this.size}px`,
       }
     },
+    prefix() {
+      return PREFIX
+    },
   },
 
   methods: {},
 }
 </script>
-
-<style lang="less" scoped>
-.loading {
-  animation: loading 0.8s linear infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-</style>
