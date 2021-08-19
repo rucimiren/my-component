@@ -6,6 +6,7 @@ import loadingDirective from './components/Loading/directive'
 import loadingService from './components/Loading/service'
 import { PREFIX } from './utils/constant'
 
+import './index.less'
 import './assets/css/index.css'
 import './assets/xiao-icons/xiao-icons.css'
 

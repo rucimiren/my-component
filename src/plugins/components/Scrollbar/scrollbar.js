@@ -3,7 +3,6 @@ import scrollbarWidth from './utils/scrollbar-width'
 import { toObject } from './utils/utils'
 import { PREFIX } from '../../utils/constant'
 import Bar from './utils/bar'
-import './scrollbar.less'
 
 export default {
   name: 'scrollbar',

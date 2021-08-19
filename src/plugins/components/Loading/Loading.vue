@@ -2,28 +2,15 @@
   <transition name="fade">
     <div
       v-if="visible"
-      class="
-        w-full
-        h-full
-        absolute
-        left-0
-        top-0
-        bg-white-f85
-        flex
-        justify-center
-        items-center
-        flex-col
-        z-index-2000
-      "
-      :class="[loadingCustomClass]"
+      :class="[`${prefix}loading`, loadingCustomClass]"
       :style="loadingStyle"
     >
       <Icon
-        class="text-30"
+        size="30"
         :name="loadingClass ? loadingClass : `${prefix}icon-loading2`"
         :color="loadingColor ? loadingColor : '#2C68FF'"
       />
-      <p v-if="loadingText" class="text-14" :style="textStyle">
+      <p v-if="loadingText" :style="textStyle">
         {{ loadingText }}
       </p>
     </div>
@@ -77,14 +64,3 @@ export default {
   },
 }
 </script>
-<style lang="less" scoped>
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-/*入场(离场)动画的时间段   */
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.3s ease;
-}
-</style>
