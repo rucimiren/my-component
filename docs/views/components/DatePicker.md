@@ -11,7 +11,7 @@
   <datePicker-demo/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/datePicker/demo.vue
+<<< @/src/plugins/demo/datePicker/demo.vue#vue
 
 
 

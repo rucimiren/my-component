@@ -1,5 +1,6 @@
 <template>
   <div class="demo-sidebar">
+    <!-- #region vue -->
     <xiao-scrollbar noresize wrap-style="height: 500px;">
       <div class="demo-sidebar__content">
         <div>三字经</div>
@@ -7,6 +8,7 @@
         <div>{{ article }}</div>
       </div>
     </xiao-scrollbar>
+    <!-- #endregion vue -->
   </div>
 </template>
 

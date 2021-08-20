@@ -1,3 +1,4 @@
+// #region vue
 <template>
   <div class="datePicker">
     <xiao-date-picker v-model="date" format="YYYY/MM/DD" />
@@ -21,7 +22,7 @@ export default {
   },
 }
 </script>
-
+// #endregion vue
 <style lang="less" scoped>
 .datePicker {
   width: 224px;

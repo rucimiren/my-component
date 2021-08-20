@@ -1,3 +1,4 @@
+// #region vue
 <template>
   <div class="loading">
     <div class="loading__desc">
@@ -48,6 +49,7 @@ export default {
   },
 }
 </script>
+// #endregion vue
 <style lang="less" scoped>
 .loading {
   &__desc {

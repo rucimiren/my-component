@@ -6,7 +6,7 @@
   <icon-demo/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/icon/demo.vue
+<!-- <<< @/src/plugins/demo/icon/demo.vue -->
 
 ### 示例2
 
@@ -14,7 +14,7 @@
   <icon-demo2/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/icon/demo2.vue
+<<< @/src/plugins/demo/icon/demo2.vue#vue
 
 
 

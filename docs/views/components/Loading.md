@@ -6,7 +6,7 @@
   <loading-demo/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/loading/demo.vue
+<<< @/src/plugins/demo/loading/demo.vue#vue
 
 ### 服务模式
 
@@ -14,7 +14,7 @@
   <loading-demo2/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/loading/demo2.vue
+<<< @/src/plugins/demo/loading/demo2.vue#vue
 
 
 

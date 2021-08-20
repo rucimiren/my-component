@@ -1,3 +1,4 @@
+// #region vue
 <template>
   <div v-loading.fullscreen="fullscreenLoading">
     <div class="loading-demo__desc">
@@ -36,7 +37,7 @@ export default {
   },
 }
 </script>
-
+// #endregion vue
 <style lang="less" scoped>
 .loading-demo {
   &__desc {

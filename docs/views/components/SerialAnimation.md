@@ -11,7 +11,7 @@
   <serialAnimation-demo/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/serialAnimation/demo.vue
+<<< @/src/plugins/demo/serialAnimation/demo.vue#vue
 
 
 

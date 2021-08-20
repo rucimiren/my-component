@@ -6,7 +6,7 @@
   <scrollbar-demo/>
 </InitDemoBlock>
 
-<<< @/src/plugins/demo/scrollbar/demo.vue
+<<< @/src/plugins/demo/scrollbar/demo.vue#vue
 
 
 

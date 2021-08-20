@@ -1,4 +1,5 @@
 <template>
+  <!-- #region vue -->
   <div class="icon-demo">
     <div class="icon-demo__class">
       <p>直接通过class的方式使用</p>
@@ -11,7 +12,7 @@
     <div class="icon-demo__component">
       <p>通过组件的方式使用</p>
       <xiao-icon size="24" name="xiao-icon-map-filling" color="red" />
-      <xiao-icon :size="size" name="xiao-icon-meh-filling" color="#409eff" />
+      <xiao-icon :size="34" name="xiao-icon-meh-filling" color="#409eff" />
       <xiao-icon name="xiao-icon-smile" color="rgba(0, 0, 0, 1)" />
       <xiao-icon
         size="24"
@@ -27,16 +28,8 @@
       <p>以class方式使用是静态的，以组件方式使用是动态的</p>
     </div>
   </div>
+  <!-- #endregion vue -->
 </template>
-<script>
-export default {
-  data() {
-    return {
-      size: 34,
-    }
-  },
-}
-</script>
 <style lang="less" scoped>
 .icon-demo {
   font-size: 24px;
