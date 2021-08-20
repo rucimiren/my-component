@@ -4,6 +4,8 @@ heroImage: /stress.png
 tagline: 让梦想在指尖上飞舞，让精彩在低调中绽放
 actionText: 加油加油 →
 actionLink: /views/components/
+# 不能有空格
+bannerBg: background-image:linear-gradient(to right,#00dbde 0%,#fc00ff 100%)
 features:
 - title: 加油
   details: 生活中只有5%的比较精彩，也只有5%的比较痛苦，另外的90%都是在平淡中度过。而人都是被这5%的精彩勾引着，忍受着5%的痛苦，生活在这90%的平淡之中。
@@ -13,4 +15,4 @@ features:
   details: 你如果出色地完成了某件事，那你应该再做一些其他的精彩事儿。不要在前一件事上徘徊太久，想想接下来该做什么。 
 footer: 你要身后有力量，前方有希望，心中有爱，才能走的更远
 ---
-<div></div>
+<!-- <div></div> -->

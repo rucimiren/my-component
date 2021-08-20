@@ -1,11 +1,12 @@
 const nav = require('./configs/nav')
 const plugins = require('./configs/plugins')
 const sidebar = require('./configs/sidebar')
+const vdoingThemeConfig = require('./configs/vdoing/themeConfig')
 
 module.exports = (options, ctx) => {
-  console.log('options', options)
-  console.log('ctx', ctx)
   return {
+    // theme: 'reco',
+    theme: 'vdoing',
     title: '肖强的博客',
     description: '肖强的博客',
     base: '/',   // 设置站点根路径
@@ -33,7 +34,8 @@ module.exports = (options, ctx) => {
       smoothScroll: true,
       nav,
       sidebar,
-      sidebarDepth : 2
+      sidebarDepth : 2,
+      ...vdoingThemeConfig
     },
     markdown: {
       lineNumbers: false, // 行号 (你可以通过配置来为每个代码块显示行号)

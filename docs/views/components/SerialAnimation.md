@@ -1,3 +1,13 @@
+---
+title: serialAnimation
+date: 2021-08-18 16:54:23
+permalink: /pages/8afb55/
+categories:
+  - views
+  - components
+tags:
+  - 
+---
 ## 序列帧动画
 
 <!-- ::: demo 序列帧动画
