@@ -3,7 +3,8 @@ module.exports = {
   contentBgStyle: 1, // 1 => 方格 | 2 => 横线 | 3 => 竖线 | 4 => 左斜线 | 5 => 右斜线 | 6 => 点状
   // bodyBgImg: 'http://files.yaru.vip/images/1.jpg',
   blogger: {
-    avatar: 'http://files.yaru.vip/images/2.jpg',
+    avatar: 'http://yaru.vip:8080/images/12.jpg',
+    // avatar: `<img src="http://yaru.vip:8080/images/12.jpg" alt="头像" title="我好看吗" />`,
     name: 'xiaoQiang',
     slogan: '在知识的海洋里遨游',
   },

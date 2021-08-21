@@ -1,6 +1,15 @@
 const path = require('path')
 
 module.exports = [
+  ['sakura', {
+    num: 20,
+    show: true,
+    zIndex: 9999999,
+    img: {
+      replace: false,
+      httpUrl: '', // 绝对路径
+    }
+  }],
   ['vuepress-plugin-cat-model', {
     theme: ['miku','blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'z16'],
     clean: false,
