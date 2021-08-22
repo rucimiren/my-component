@@ -12,7 +12,9 @@ module.exports = (options, ctx) => {
     base: '/',   // 设置站点根路径
     dest: './root',  // 设置输出目录
     port: 8086,
-    head: [],
+    head: [
+      ['script', { src: 'http://yaru.vip:8080/js/colorful.js' }]
+    ],
     configureWebpack: {
       resolve: {
         // 别名配置
@@ -29,7 +31,7 @@ module.exports = (options, ctx) => {
       }
     },
     themeConfig : {
-      logo: '/logo.jpeg',
+      logo: 'http://yaru.vip:8080/images/8.jpg',
       lastUpdated: '上次更新',
       smoothScroll: true,
       nav,

@@ -1,11 +1,14 @@
 ---
 home: true
-heroImage: /stress.png
+heroImage: http://yaru.vip:8080/images/8.jpg
 tagline: 让梦想在指尖上飞舞，让精彩在低调中绽放
 actionText: 加油加油 →
 actionLink: /views/components/
 # 不能有空格
-bannerBg: background-image:linear-gradient(to right,#00dbde 0%,#fc00ff 100%)
+# bannerBg: background-image:linear-gradient(to right,#00dbde 0%,#fc00ff 100%)
+# bannerBg: none
+# bannerBg 和 showStarSky 不能同时存在 showStarSky优先级高 （自己加入的星空背景）
+showStarSky: true
 features:
 - title: 加油
   details: 生活中只有5%的比较精彩，也只有5%的比较痛苦，另外的90%都是在平淡中度过。而人都是被这5%的精彩勾引着，忍受着5%的痛苦，生活在这90%的平淡之中。

@@ -4,9 +4,8 @@ module.exports = {
   // bodyBgImg: 'http://files.yaru.vip/images/1.jpg',
   blogger: {
     avatar: 'http://yaru.vip:8080/images/12.jpg',
-    // avatar: `<img src="http://yaru.vip:8080/images/12.jpg" alt="头像" title="我好看吗" />`,
     name: 'xiaoQiang',
-    slogan: '在知识的海洋里遨游',
+    slogan: '因为爱所以爱',
   },
   footer: {
     text: `icon组件不能用`,
