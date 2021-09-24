@@ -13,7 +13,8 @@ module.exports = (options, ctx) => {
     dest: './root',  // 设置输出目录
     port: 8086,
     head: [
-      ['script', { src: 'http://yaru.vip:8080/js/colorful.js' }]
+      ['script', { src: 'http://yaru.vip:8080/js/colorful.js' }],
+      ['script', { src: 'http://yaru.vip:8080/js/sakura.js' }]
     ],
     configureWebpack: {
       resolve: {
@@ -31,7 +32,7 @@ module.exports = (options, ctx) => {
       }
     },
     themeConfig : {
-      logo: 'http://yaru.vip:8080/images/8.jpg',
+      logo: 'http://yaru.vip:8080/images/family/8.jpg',
       lastUpdated: '上次更新',
       smoothScroll: true,
       nav,

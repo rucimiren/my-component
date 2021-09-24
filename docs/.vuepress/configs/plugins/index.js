@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = [
   ['sakura', {
     num: 20,
-    show: true,
+    show: false,
     zIndex: 9999999,
     img: {
       replace: false,
