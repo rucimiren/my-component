@@ -9,6 +9,10 @@ module.exports = {
           title: 'dayjs',
           path: '/views/common/plugins/dayjs',
         },
+        {
+          title: 'vue-clipboard2',
+          path: '/views/common/plugins/vue-clipboard2',
+        },
       ]
     }
   ]
