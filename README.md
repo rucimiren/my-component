@@ -28,4 +28,4 @@ npm publish --access public --registry http://registry.npmjs.org
 #### V0.3.3
 ##### icon组件增加size属性
 ### 使用
-[参考文档](http://39.107.98.235/views/components/)
+[参考文档](http://yaru.vip/pages/78eeb2/)
