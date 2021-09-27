@@ -38,5 +38,17 @@ tags:
   bgColor: '#B15BFF'
   textColor: '#fff'
   avatar: http://yaru.vip:8080/images/avatar/one-piece/DM_20210927153045_067.JPEG
+- name: url-parse
+  desc: url-parse是一个轻量的处理url的库
+  link: /views/common/plugins/url-parse.html
+  bgColor: '#00FFFF'
+  textColor: '#6854A1'
+  avatar: http://yaru.vip:8080/images/avatar/one-piece/DM_20210927153045_096.JPEG
+- name: clipboard
+  desc: clipboard是前端能够调用剪切板的一个插件
+  link: /views/common/plugins/clipboard.html
+  bgColor: '#F9F900'
+  textColor: '#6854A1'
+  avatar: http://yaru.vip:8080/images/avatar/youth/DM_20210927164305_022.JPEG
 ```
 :::

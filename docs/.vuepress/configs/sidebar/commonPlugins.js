@@ -21,6 +21,14 @@ module.exports = {
           title: 'number-precision',
           path: '/views/common/plugins/number-precision',
         },
+        {
+          title: 'url-parse',
+          path: '/views/common/plugins/url-parse',
+        },
+        {
+          title: 'clipboard',
+          path: '/views/common/plugins/clipboard',
+        },
       ]
     }
   ]
