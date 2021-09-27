@@ -1,6 +1,9 @@
 import dayjs from 'dayjs'
 import numbers from 'number-precision'
 
+// 延时 delay(3000)
+export const delay = async t => new Promise(r => setTimeout(r, t))
+
 // 格式化日期
 export function formatDate(value, format = 'YYYY-MM-DD') {
   if (!value) return ''

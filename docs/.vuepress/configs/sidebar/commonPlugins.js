@@ -13,6 +13,14 @@ module.exports = {
           title: 'vue-clipboard2',
           path: '/views/common/plugins/vue-clipboard2',
         },
+        {
+          title: 'qs',
+          path: '/views/common/plugins/qs',
+        },
+        {
+          title: 'number-precision',
+          path: '/views/common/plugins/number-precision',
+        },
       ]
     }
   ]

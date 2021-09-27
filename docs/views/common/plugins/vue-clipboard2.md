@@ -16,11 +16,13 @@ vue-clipboard2是前端能够调用剪切板的一个插件
 :::
 
 ## 安装
+
 ```js
 npm install --save vue-clipboard2
 ```
 
 ## 引入
+
 ```js
 在main.js中引入
 import Vue from 'vue'
@@ -31,6 +33,7 @@ Vue.use(VueClipboard)
 ## 使用
 
 ### 使用指令的方式进行绑定
+
 ```vue
 <template>
   <div class="container">
@@ -62,6 +65,7 @@ export default {
 ```
 
 ### 使用服务方式进行调用
+
 ```vue
 <template>
   <div class="container">
