@@ -3,11 +3,11 @@ title: url-parse
 date: 2021-09-27 19:38:13
 permalink: /pages/495e88/
 categories:
-  - views
-  - common
-  - plugins
+  - 常用
+  - 插件
+  - url-parse
 tags:
-  - 
+  - 插件
 ---
 
 ::: tip url-parse

@@ -3,10 +3,10 @@ title: loading
 date: 2021-08-18 16:54:23
 permalink: /pages/11e3f5/
 categories:
-  - views
-  - components
+  - 组件
+  - loading
 tags:
-  - 
+  - 组件
 ---
 ## Loading组件
 

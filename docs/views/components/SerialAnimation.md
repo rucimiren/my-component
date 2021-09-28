@@ -3,10 +3,10 @@ title: serialAnimation
 date: 2021-08-18 16:54:23
 permalink: /pages/8afb55/
 categories:
-  - views
-  - components
+  - 组件
+  - serialAnimation
 tags:
-  - 
+  - 组件
 ---
 ## 序列帧动画
 

@@ -3,11 +3,11 @@ title: qs
 date: 2021-09-27 17:57:22
 permalink: /pages/92c6e6/
 categories:
-  - views
-  - common
-  - plugins
+  - 常用
+  - 插件
+  - qs
 tags:
-  - 
+  - 插件
 ---
 
 ::: tip qs

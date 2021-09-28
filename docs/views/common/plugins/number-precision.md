@@ -3,11 +3,11 @@ title: number-precision
 date: 2021-09-27 18:34:33
 permalink: /pages/f504df/
 categories:
-  - views
-  - common
-  - plugins
+  - 常用
+  - 插件
+  - number-precision
 tags:
-  - 
+  - 插件
 ---
 
 ::: tip number-precision
