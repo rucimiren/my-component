@@ -55,5 +55,19 @@ tags:
   textColor: '#6854A1'
   avatar: http://yaru.vip:8080/images/avatar/youth/DM_20210927164305_022.JPEG
 
+- name: js-cookie
+  desc: 一个简单的轻量级的处理cookies的jsAPI
+  link: /pages/4c8835/
+  bgColor: '#7E3D76'
+  textColor: '#fff'
+  avatar: http://yaru.vip:8080/images/avatar/youth/DM_20210927164305_005.JPEG
+
+- name: accounting
+  desc: 一个运算非常精确的数值转换及货币转换的库
+  link: /pages/894618/
+  bgColor: '#007979'
+  textColor: '#fff'
+  avatar: http://yaru.vip:8080/images/avatar/youth/DM_20210927164305_015.JPEG
+
 ```
 :::

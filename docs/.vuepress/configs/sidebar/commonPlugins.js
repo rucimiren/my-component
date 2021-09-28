@@ -29,6 +29,14 @@ module.exports = {
           title: 'clipboard',
           path: '/views/common/plugins/clipboard',
         },
+        {
+          title: 'js-cookie',
+          path: '/views/common/plugins/js-cookie',
+        },
+        {
+          title: 'accounting',
+          path: '/views/common/plugins/accounting',
+        },
       ]
     }
   ]

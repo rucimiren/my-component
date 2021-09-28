@@ -1,5 +1,13 @@
-setTimeout(() => {
-  ;((window, document) => {
+;((window, document) => {
+  function isBody() {
+    if (!(document.body || window.document.body)) {
+      setTimeout(isBody, 0)
+    } else {
+      render()
+    }
+  }
+
+  function render() {
     let num = 20
     let imgSrc = 'http://yaru.vip:8080/images/icon/sakura.png'
     const doc = document || window.document
@@ -165,6 +173,8 @@ setTimeout(() => {
       })
     }
     startSakura()
-    doc.body?.appendChild(canvas)
-  })(window, document)
-}, 0)
+    doc.body.appendChild(canvas)
+  }
+
+  isBody()
+})(window, document)
