@@ -1,13 +1,13 @@
 module.exports = [
-  { text: '主页', link: '/' },
-  { text: '指南', link: '/views/guide/' },
-  { text: '常用',
+  { text: 'home', link: '/' },
+  { text: 'guide', link: '/views/guide/' },
+  { text: 'common',
     items: [
-      { text: '插件', link: '/views/common/plugins/' },
-      { text: '案例', link: '/views/common/case/' }
+      { text: 'plugins', link: '/views/common/plugins/' },
+      { text: 'case', link: '/views/common/case/' }
     ]
   },
 
-  { text: '组件', link: '/views/components/' },
-  { text: '介绍', link: '/views/desc/' },
+  { text: 'components', link: '/views/components/' },
+  { text: 'website tools', link: '/views/websiteTools/' },
 ]
