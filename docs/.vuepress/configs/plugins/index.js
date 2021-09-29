@@ -36,7 +36,7 @@ module.exports = [
     },
   }],
   ['demo-container', {
-    component: 'InitDemoBlock'
+    // component: 'InitDemoBlock'
   }],
     ['@vuepress/active-header-links', {
     sidebarLinkSelector: '.sidebar-link',
