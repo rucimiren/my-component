@@ -3,7 +3,7 @@ home: true
 heroImage: http://yaru.vip:8080/images/family/8.jpg
 tagline: 让梦想在指尖上飞舞，让精彩在低调中绽放
 actionText: 加油加油 →
-actionLink: /views/components/
+actionLink: /views/guide/
 # 不能有空格
 # bannerBg: background-image:linear-gradient(to right,#00dbde 0%,#fc00ff 100%)
 # bannerBg: none

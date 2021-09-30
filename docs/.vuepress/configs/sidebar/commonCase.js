@@ -9,6 +9,18 @@ module.exports = {
           title: 'Gluttonous Snake',
           path: '/views/common/case/gluttonousSnake',
         },
+        {
+          title: 'Verification Code',
+          path: '/views/common/case/verificationCode',
+        },
+        {
+          title: 'Star sky',
+          path: '/views/common/case/starSky',
+        },
+        {
+          title: 'gobang ',
+          path: '/views/common/case/gobang',
+        },
       ]
     }
   ]

@@ -10,6 +10,7 @@
 </template>
 <script>
 export default {
+  name: 'gluttonousSnake',
   data() {
     return {
       sn: [42, 41],

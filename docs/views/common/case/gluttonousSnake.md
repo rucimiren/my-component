@@ -7,7 +7,7 @@ categories:
   - case
   - gluttonousSnake
 tags:
-  - 
+  - case
 ---
 
 ::: tip gluttonousSnake
