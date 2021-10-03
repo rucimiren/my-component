@@ -22,18 +22,21 @@ module.exports = [
     },
     messageStyle: {
       height: 'auto',
-      right: '68px',
-      bottom: '190px'
+      left: '38px',
+      bottom: '200px'
     },
     modelStyle: {
-      right: '100px',
+      left: '70px',
       bottom: '0px',
       opacity: '0.9'
     },
     btnStyle: {
-      right: '100px',
+      left: '70px',
       bottom: '60px'
     },
+    backStyle: {
+      left: '70px'
+    }
   }],
   ['demo-container', {
     // component: 'InitDemoBlock'

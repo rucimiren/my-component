@@ -21,6 +21,10 @@ module.exports = {
           title: 'gobang ',
           path: '/views/common/case/gobang',
         },
+        {
+          title: 'drawing ',
+          path: '/views/common/case/drawing',
+        },
       ]
     }
   ]
