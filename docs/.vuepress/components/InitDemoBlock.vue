@@ -60,7 +60,7 @@ export default {
         classList.contains('language-html') ||
         classList.contains('language-js'))
     ) {
-      this.$refs.code.appendChild(nextElementSibling)
+      this.$refs.code?.appendChild(nextElementSibling)
       this.nextElementSibling = nextElementSibling
       this.hasCode = true
     }

@@ -16,7 +16,9 @@ tags:
 :::
 
 <InitDemoBlock>
-  <gobang/>
+  <div>
+    <gobang/>
+  </div>
 </InitDemoBlock>
 
 <<< @/docs/.vuepress/components/gobang.vue

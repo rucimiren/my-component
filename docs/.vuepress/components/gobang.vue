@@ -22,8 +22,10 @@ export default {
       len: 40, //棋盘的每个小格的宽高
       chessXY: 36, //棋子的大小
       boo: true, // 控制黑白棋的切换
-      black: new Image(),
-      white: new Image(),
+      // black: new Image(),
+      // white: new Image(),
+      black: null,
+      white: null,
       canvas: null,
       ctx: null,
       left: 0, // 棋盘距离页面左侧的距离
@@ -35,27 +37,32 @@ export default {
     this.init()
     this.offset(this.canvas)
     window.addEventListener('resize', () => {
-      this.left = 0
-      this.top = 0
-      this.offset(this.canvas)
-      // console.log(this.left, this.top)
+      if (this.canvas) {
+        this.left = 0
+        this.top = 0
+        this.offset(this.canvas)
+      }
     })
   },
 
   methods: {
     offset(ele) {
-      if (ele.offsetParent === document.body) {
-        this.left += ele.offsetLeft
-        this.top += ele.offsetTop
-      } else {
-        this.left += ele.offsetLeft
-        this.top += ele.offsetTop
-        this.offset(ele.offsetParent)
+      if (ele) {
+        if (ele.offsetParent === document.body) {
+          this.left += ele.offsetLeft
+          this.top += ele.offsetTop
+        } else {
+          this.left += ele.offsetLeft
+          this.top += ele.offsetTop
+          this.offset(ele.offsetParent)
+        }
       }
     },
     init() {
       this.canvas = this.$refs.gobangCanvas
       this.ctx = this.canvas.getContext('2d')
+      this.black = document.createElement('img')
+      this.white = document.createElement('img')
       this.black.src = 'http://yaru.vip:8080/images/icon/black.png'
       this.white.src = 'http://yaru.vip:8080/images/icon/white.png'
       for (let i = 0; i <= this.mrow; i++) {
