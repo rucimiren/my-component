@@ -1,14 +1,24 @@
 module.exports = [
-  { text: 'home', link: '/' },
-  { text: 'guide', link: '/views/guide/' },
-  { text: 'web document', link: '/views/webDocument/' },
-  { text: 'common',
+  { text: 'Home', link: '/' },
+  { text: 'Guide', link: '/views/guide/' },
+  { text: 'Web Document', link: '/views/webDocument/' },
+  { text: 'Common',
+    link: '/views/common/case',
     items: [
-      { text: 'plugins', link: '/views/common/plugins/' },
-      { text: 'case', link: '/views/common/case/' }
+      { text: 'Plugins', link: '/views/common/plugins/' },
+      { text: 'Case', link: '/views/common/case/' }
     ]
   },
 
-  { text: 'components', link: '/views/components/' },
-  { text: 'website tools', link: '/views/websiteTools/' },
+  { text: 'Components', link: '/views/components/' },
+  {
+    text: 'Article Index',
+    link: '/archives/',
+    items: [
+      { text: 'Categories', link: '/categories/' },
+      { text: 'Tags', link: '/tags/' },
+      { text: 'Archives', link: '/archives/' },
+    ],
+  },
+  { text: 'Website Tools', link: '/views/websiteTools/' },
 ]

@@ -2,6 +2,7 @@
 title: guide
 date: 2021-08-04 20:06:47
 permalink: /pages/5f4ad1/
+sticky: 1
 categories:
   - guide
 tags:

@@ -2,12 +2,14 @@ const components = require('./components')
 const unify = require('./unify')
 const commonPlugins = require('./commonPlugins')
 const commonCase = require('./commonCase')
-const webDocumentEs6 = require('./webDocumentEs6')
+const webDocumentES6 = require('./webDocumentES6')
+const webDocumentGit = require('./webDocumentGit')
 
 module.exports = {
   ...components,
   ...unify,
   ...commonPlugins,
   ...commonCase,
-  ...webDocumentEs6,
+  ...webDocumentES6,
+  ...webDocumentGit,
 }

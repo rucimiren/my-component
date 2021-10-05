@@ -12,12 +12,19 @@ tags:
 
 ::: cardList 3
 ```yaml
-- name: ES6 教程
+- name: ES6
   desc: ES6 教程
   link: /pages/f344d070a1031ef7
   bgColor: '#CBEAFA' 
   textColor: '#6854A1' 
   avatar: https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200112160453.png
+
+- name: Git
+  desc: Git 教程
+  link: /pages/8292d8/
+  bgColor: '#CBEAFA' 
+  textColor: '#6854A1' 
+  avatar: https://avatars3.githubusercontent.com/u/18133?s=200&v=4
 
 ```
 :::
