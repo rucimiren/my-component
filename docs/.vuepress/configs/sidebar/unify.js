@@ -1,3 +1,3 @@
 module.exports = {
-  '/views/desc/':['/views/desc/'],
+  // '/views/desc/':['/views/desc/'],
 }
