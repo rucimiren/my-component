@@ -25,6 +25,7 @@
 
 <script>
 // import { Message } from '@jdt/find'
+import Message from './message/Message'
 import clipboardCopy from 'clipboard-copy'
 
 export default {
@@ -70,6 +71,7 @@ export default {
       if (!this.hasCode) {
         return
       }
+      const message = new Message()
 
       try {
         let codeEl = this.nextElementSibling.children[0].children[0]
@@ -78,16 +80,28 @@ export default {
           clipboardCopy(codeEl.textContent)
             .then(() => {
               // Message.success('复制成功')
-              window.alert('复制成功')
+              // window.alert('复制成功')
+              message.show({
+                text: '复制成功',
+                duration: 1000,
+              })
             })
             .catch(() => {
               // Message.success('复制失败，请重试')
-              window.alert('复制失败，请重试')
+              // window.alert('复制失败，请重试')
+              message.show({
+                text: '复制失败，请重试',
+                duration: 1000,
+              })
             })
         }
       } catch (err) {
         // Message.success('复制失败，找不到源码')
-        window.alert('复制失败，找不到源码')
+        // window.alert('复制失败，找不到源码')
+        message.show({
+          text: '复制失败，找不到源码',
+          duration: 1000,
+        })
       }
     },
   },
