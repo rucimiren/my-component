@@ -4,7 +4,6 @@ date: 2021-08-18 16:54:23
 permalink: /pages/fcedfb/
 categories:
   - components
-  - install
 tags:
   - components
 ---

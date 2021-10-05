@@ -5,7 +5,6 @@ permalink: /pages/a726b1/
 categories:
   - common
   - plugins
-  - dayjs
 tags:
   - plugins
 ---

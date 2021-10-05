@@ -4,7 +4,6 @@ date: 2021-08-18 16:54:23
 permalink: /pages/f9cca4/
 categories:
   - components
-  - scrollbar
 tags:
   - components
 ---

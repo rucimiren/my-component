@@ -5,7 +5,6 @@ permalink: /pages/f504df/
 categories:
   - common
   - plugins
-  - number-precision
 tags:
   - plugins
 ---

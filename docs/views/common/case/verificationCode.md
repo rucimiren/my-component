@@ -5,7 +5,6 @@ permalink: /pages/199119/
 categories:
   - common
   - case
-  - verificationCode
 tags:
   - case
 ---

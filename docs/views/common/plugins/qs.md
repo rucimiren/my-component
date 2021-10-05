@@ -5,7 +5,6 @@ permalink: /pages/92c6e6/
 categories:
   - common
   - plugins
-  - qs
 tags:
   - plugins
 ---

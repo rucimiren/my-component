@@ -5,7 +5,6 @@ permalink: /pages/4cbce3/
 categories:
   - common
   - case
-  - starSky
 tags:
   - case
 ---

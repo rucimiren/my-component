@@ -5,7 +5,6 @@ permalink: /pages/0b30a0/
 categories:
   - common
   - case
-  - gobang
 tags:
   - case
 ---

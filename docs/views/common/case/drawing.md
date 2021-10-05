@@ -5,7 +5,6 @@ permalink: /pages/896c38/
 categories:
   - common
   - case
-  - drawing
 tags:
   - case
 ---

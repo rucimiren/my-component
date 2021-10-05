@@ -5,7 +5,6 @@ permalink: /pages/4c8835/
 categories:
   - common
   - plugins
-  - js-cookie
 tags:
   - plugins
 ---

@@ -5,7 +5,6 @@ permalink: /pages/b792c3/
 categories:
   - common
   - case
-  - chinaMap
 tags:
   - case
 ---

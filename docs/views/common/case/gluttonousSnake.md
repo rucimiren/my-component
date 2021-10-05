@@ -5,7 +5,6 @@ permalink: /pages/fa37cf/
 categories:
   - common
   - case
-  - gluttonousSnake
 tags:
   - case
 ---

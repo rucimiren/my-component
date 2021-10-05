@@ -5,7 +5,6 @@ permalink: /pages/894618/
 categories:
   - common
   - plugins
-  - accounting
 tags:
   - plugins
 ---

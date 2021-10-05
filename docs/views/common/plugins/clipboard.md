@@ -5,7 +5,6 @@ permalink: /pages/096f49/
 categories:
   - common
   - plugins
-  - clipboard
 tags:
   - plugins
 ---

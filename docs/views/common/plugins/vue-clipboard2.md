@@ -5,7 +5,6 @@ permalink: /pages/ac0978/
 categories:
   - common
   - plugins
-  - vue-clipboard2
 tags:
   - plugins
 ---
