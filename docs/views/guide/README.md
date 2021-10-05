@@ -46,6 +46,12 @@ tags:
   desc: 无论头上是怎样的天空，我准备承受任何风暴
   author: xiaoQiang
   avatar: http://yaru.vip:8080/images/family/16.jpg
+
+- img:  http://yaru.vip:8060/images/menu.gif
+  link: http://yaru.vip:8060
+  name: 坦克大战
+  author: xiaoQiang
+  avatar: http://yaru.vip:8080/images/family/16.jpg
   
 ```
 :::

@@ -41,5 +41,18 @@ tags:
   textColor: '#6854A1'
   avatar: http://yaru.vip:8080/images/avatar/one-piece/DM_20210927153045_067.JPEG
 
+- name: drawing
+  desc: 画图板
+  link: /pages/896c38/
+  bgImage: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);'
+  textColor: '#6854A1'
+  avatar: http://yaru.vip:8080/images/avatar/one-piece/DM_20210927153045_016.JPEG
+
+- name: chinaMap
+  desc: 中国地图
+  link: /pages/b792c3/
+  bgImage: 'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);'
+  textColor: '#6854A1'
+  avatar: http://yaru.vip:8080/images/avatar/one-piece/DM_20210927153045_012.JPEG
 ```
 :::

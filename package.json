@@ -60,6 +60,7 @@
     "vuepress": "^1.8.2",
     "vuepress-plugin-cat-model": "^1.2.0",
     "vuepress-plugin-demo-container": "^0.2.0",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
     "vuepress-plugin-sakura": "^1.1.0",
     "vuepress-theme-reco": "^1.6.6",
     "vuepress-theme-vdoing": "^1.8.3"

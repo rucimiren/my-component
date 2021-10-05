@@ -25,6 +25,10 @@ module.exports = {
           title: 'drawing ',
           path: '/views/common/case/drawing',
         },
+        {
+          title: 'china map ',
+          path: '/views/common/case/chinaMap',
+        },
       ]
     }
   ]

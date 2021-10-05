@@ -14,7 +14,9 @@ module.exports = (options, ctx) => {
     port: 8086,
     head: [
       ['script', { src: 'http://yaru.vip:8080/js/colorful.js' }],
-      ['script', { src: 'http://yaru.vip:8080/js/sakura.js' }]
+      ['script', { src: 'http://yaru.vip:8080/js/sakura.js' }],
+      ['script', { src: 'http://yaru.vip:8080/js/echarts.min.js' }],
+      ['script', { src: 'http://yaru.vip:8080/js/china.js' }]
     ],
     configureWebpack: {
       resolve: {

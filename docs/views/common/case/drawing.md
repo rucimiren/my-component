@@ -3,9 +3,9 @@ title: drawing
 date: 2021-10-03 21:44:20
 permalink: /pages/896c38/
 categories:
-  - views
   - common
   - case
+  - drawing
 tags:
   - 
 ---
