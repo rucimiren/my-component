@@ -3,10 +3,10 @@ title: datePicker
 date: 2021-08-04 20:06:47
 permalink: /pages/84404c/
 categories:
-  - 组件
+  - components
   - datePicker
 tags:
-  - 组件
+  - components
 ---
 ## 日期选择组件
 

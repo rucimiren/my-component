@@ -3,10 +3,10 @@ title: scrollbar
 date: 2021-08-18 16:54:23
 permalink: /pages/f9cca4/
 categories:
-  - 组件
+  - components
   - scrollbar
 tags:
-  - 组件
+  - components
 ---
 ## Scrollbar组件
 

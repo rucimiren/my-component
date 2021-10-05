@@ -3,11 +3,11 @@ title: vue-clipboard2
 date: 2021-09-26 16:54:40
 permalink: /pages/ac0978/
 categories:
-  - 常用
-  - 插件
+  - common
+  - plugins
   - vue-clipboard2
 tags:
-  - 插件
+  - plugins
 ---
 
 ---

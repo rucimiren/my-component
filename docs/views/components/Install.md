@@ -3,10 +3,10 @@ title: install
 date: 2021-08-18 16:54:23
 permalink: /pages/fcedfb/
 categories:
-  - 组件
+  - components
   - install
 tags:
-  - 组件
+  - components
 ---
 # 安装
 

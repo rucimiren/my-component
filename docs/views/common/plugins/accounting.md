@@ -3,11 +3,11 @@ title: accounting
 date: 2021-09-28 16:53:27
 permalink: /pages/894618/
 categories:
-  - 常用
-  - 插件
+  - common
+  - plugins
   - accounting
 tags:
-  - 插件
+  - plugins
 ---
 
 ::: tip accounting 

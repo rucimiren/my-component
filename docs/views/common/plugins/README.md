@@ -1,12 +1,12 @@
 ---
-title: 常用插件
+title: common plugins
 date: 2021-08-18 18:15:16
 permalink: /pages/0559a9/
 categories:
-  - 常用
-  - 插件
+  - common
+  - plugins
 tags:
-  - 插件
+  - plugins
 ---
 
 <div style='margin-top:50px'></div>

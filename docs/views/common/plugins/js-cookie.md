@@ -3,11 +3,11 @@ title: js-cookie
 date: 2021-09-28 16:23:48
 permalink: /pages/4c8835/
 categories:
-  - 常用
-  - 插件
+  - common
+  - plugins
   - js-cookie
 tags:
-  - 插件
+  - plugins
 ---
 
 ::: tip js-cookie

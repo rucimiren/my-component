@@ -7,7 +7,7 @@ categories:
   - case
   - chinaMap
 tags:
-  - 
+  - case
 ---
 
 ::: tip china map

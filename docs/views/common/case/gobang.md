@@ -7,7 +7,7 @@ categories:
   - case
   - gobang
 tags:
-  - gobang
+  - case
 ---
 
 

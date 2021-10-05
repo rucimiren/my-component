@@ -3,10 +3,10 @@ title: icon
 date: 2021-08-18 16:54:23
 permalink: /pages/d0ebc1/
 categories:
-  - 组件
+  - components
   - icon
 tags:
-  - 组件
+  - components
 ---
 ## Icon组件
 

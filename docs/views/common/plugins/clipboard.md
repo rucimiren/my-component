@@ -3,11 +3,11 @@ title: clipboard
 date: 2021-09-27 20:01:47
 permalink: /pages/096f49/
 categories:
-  - 常用
-  - 插件
+  - common
+  - plugins
   - clipboard
 tags:
-  - 插件
+  - plugins
 ---
 
 ::: tip clipboard

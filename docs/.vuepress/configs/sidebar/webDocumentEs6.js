@@ -48,6 +48,98 @@ module.exports = {
           title: '11.对象的新增方法',
           path: '/views/webDocument/ES6/11.对象的新增方法',
         },
+        {
+          title: '12.Symbol',
+          path: '/views/webDocument/ES6/12.Symbol',
+        },
+        {
+          title: '13.Set 和 Map 数据结构',
+          path: '/views/webDocument/ES6/13.Set 和 Map 数据结构',
+        },
+        {
+          title: '14.Proxy',
+          path: '/views/webDocument/ES6/14.Proxy',
+        },
+        {
+          title: '15.Reflect',
+          path: '/views/webDocument/ES6/15.Reflect',
+        },
+        {
+          title: '16.Promise 对象',
+          path: '/views/webDocument/ES6/16.Promise 对象',
+        },
+        {
+          title: '17.Iterator 和 for-of 循环',
+          path: '/views/webDocument/ES6/17.Iterator 和 for-of 循环',
+        },
+        {
+          title: '18.Generator 函数的语法',
+          path: '/views/webDocument/ES6/18.Generator 函数的语法',
+        },
+        {
+          title: '19.Generator 函数的异步应用',
+          path: '/views/webDocument/ES6/19.Generator 函数的异步应用',
+        },
+        {
+          title: '20.async 函数',
+          path: '/views/webDocument/ES6/20.async 函数',
+        },
+        {
+          title: '21.Class 的基本语法',
+          path: '/views/webDocument/ES6/21.Class 的基本语法',
+        },
+        {
+          title: '22.Class 的继承',
+          path: '/views/webDocument/ES6/22.Class 的继承',
+        },
+        {
+          title: '23.Module 的语法',
+          path: '/views/webDocument/ES6/23.Module 的语法',
+        },
+        {
+          title: '24.Module 的加载实现',
+          path: '/views/webDocument/ES6/24.Module 的加载实现',
+        },
+        {
+          title: '25.编程风格',
+          path: '/views/webDocument/ES6/25.编程风格',
+        },
+        {
+          title: '26.读懂 ECMAScript 规格',
+          path: '/views/webDocument/ES6/26.读懂 ECMAScript 规格',
+        },
+        {
+          title: '27.异步遍历器',
+          path: '/views/webDocument/ES6/27.异步遍历器',
+        },
+        {
+          title: '28.ArrayBuffer',
+          path: '/views/webDocument/ES6/28.ArrayBuffer',
+        },
+        {
+          title: '29.最新提案',
+          path: '/views/webDocument/ES6/29.最新提案',
+        },
+        {
+          title: '30.装饰器',
+          path: '/views/webDocument/ES6/30.装饰器',
+        },
+        {
+          title: '31.函数式编程',
+          path: '/views/webDocument/ES6/31.函数式编程',
+        },
+        {
+          title: '32.Mixin',
+          path: '/views/webDocument/ES6/32.Mixin',
+        },
+        {
+          title: '33.SIMD',
+          path: '/views/webDocument/ES6/33.SIMD',
+        },
+        {
+          title: '34.参考链接',
+          path: '/views/webDocument/ES6/34.参考链接',
+        },
       ]
     }
   ]

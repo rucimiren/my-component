@@ -1,11 +1,11 @@
 ---
-title: 组件
+title: components
 date: 2021-08-18 18:08:38
 permalink: /pages/78eeb2/
 categories:
-  - 组件
+  - components
 tags:
-  - 组件
+  - components
 ---
 <div style='margin-top:50px'></div>
 
