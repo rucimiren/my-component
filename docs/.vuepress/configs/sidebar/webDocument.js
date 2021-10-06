@@ -44,4 +44,26 @@ module.exports = {
       useSubdirectories: true,
       collapsable: true,
     }),
+    '/views/webDocument/CSS/': [
+      {
+        title: 'CSS',
+        collapsable:  false,
+        children: requireContext({
+          dirname: '../../../views/webDocument/CSS',
+          filePath: '/views/webDocument/CSS/'
+        })
+      }
+    ],
+    '/views/webDocument/more/': requireContext({
+      dirname: '../../../views/webDocument/more',
+      filePath: '/views/webDocument/more/',
+      useSubdirectories: true,
+      collapsable: true,
+    }),
+    '/views/webDocument/technicalArticle/': requireContext({
+      dirname: '../../../views/webDocument/technicalArticle',
+      filePath: '/views/webDocument/technicalArticle/',
+      useSubdirectories: true,
+      collapsable: true,
+    }),
   }
