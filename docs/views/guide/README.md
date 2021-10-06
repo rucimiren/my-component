@@ -53,6 +53,20 @@ tags:
   name: 坦克大战
   author: xiaoQiang
   avatar: http://yaru.vip:8080/images/family/16.jpg
+
+- img:  http://yaru.vip:8080/images/horizontal/wallpaper/DM_20210927170118_002.JPEG
+  link: /pages/978584/
+  name: web document
+  desc: 最困难的事情就是认识自己
+  author: xiaoQiang
+  avatar: http://yaru.vip:8080/images/family/16.jpg
+
+- img:  http://yaru.vip:8080/images/horizontal/wallpaper/DM_20210927170118_003.JPEG
+  link: /archives/
+  name: archives
+  desc: 有勇气承担命运这才是英雄好汉
+  author: xiaoQiang
+  avatar: http://yaru.vip:8080/images/family/16.jpg
   
 ```
 :::
