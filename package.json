@@ -60,6 +60,7 @@
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.8.2",
     "vuepress-plugin-cat-model": "^1.2.0",
+    "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-demo-container": "^0.2.0",
     "vuepress-plugin-one-click-copy": "^1.0.6",
     "vuepress-plugin-sakura": "^1.1.0",

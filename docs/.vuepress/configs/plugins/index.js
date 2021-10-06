@@ -83,4 +83,24 @@ module.exports = [
       toolTipMessage: '复制', // 元素的title属性 default is ''Copy to clipboard'
     },
   ],
+  [
+    'vuepress-plugin-comment', // 评论
+    {
+      choosen: 'gitalk',
+      options: {
+        clientID: 'e5bf96f555589812ce86',
+        clientSecret: '9c17efc0252c8e46813b3f6cea894c40eff4c2af',
+        repo: 'my-component', // GitHub 仓库
+        owner: 'rucimiren', // GitHub仓库所有者
+        admin: ['rucimiren'], // 对仓库有写权限的人
+        // distractionFreeMode: true,
+        pagerDirection: 'last', // 'first'正序 | 'last'倒序
+        id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+        title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+        labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+        body:
+          '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+      },
+    },
+  ],
 ]
