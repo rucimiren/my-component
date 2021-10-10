@@ -14,7 +14,7 @@ tags:
 :::
 
 <InitDemoBlock>
-  <verificationCode/>
+  <case-verificationCode/>
 </InitDemoBlock>
 
-<<< @/docs/.vuepress/components/verificationCode.vue
+<<< @/docs/.vuepress/components/case/verificationCode.vue

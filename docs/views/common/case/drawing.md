@@ -16,8 +16,8 @@ tags:
 
 <InitDemoBlock>
   <div>
-    <drawing/>
+    <case-drawing/>
   </div>
 </InitDemoBlock>
 
-<<< @/docs/.vuepress/components/drawing.vue
+<<< @/docs/.vuepress/components/case/drawing.vue

@@ -6,7 +6,8 @@ module.exports = [
     link: '/views/common/case',
     items: [
       { text: 'Plugins', link: '/views/common/plugins/' },
-      { text: 'Case', link: '/views/common/case/' }
+      { text: 'Case', link: '/views/common/case/' },
+      { text: 'Animation', link: '/pages/00c33a/' }, // 此文件夹没有README文件承接，所以需要固定到某一页面
     ]
   },
 

@@ -22,7 +22,7 @@ tags:
 ::: -->
 
 <InitDemoBlock>
-  <gluttonousSnake/>
+  <case-gluttonousSnake/>
 </InitDemoBlock>
 
-<<< @/docs/.vuepress/components/gluttonousSnake.vue
+<<< @/docs/.vuepress/components/case/gluttonousSnake.vue

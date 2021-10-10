@@ -15,8 +15,8 @@ tags:
 
 <InitDemoBlock>
   <div>
-    <chinaMap/>
+    <case-chinaMap/>
   </div>
 </InitDemoBlock>
 
-<<< @/docs/.vuepress/components/chinaMap.vue
+<<< @/docs/.vuepress/components/case/chinaMap.vue

@@ -16,8 +16,8 @@ tags:
 
 <InitDemoBlock>
   <div>
-    <gobang/>
+    <case-gobang/>
   </div>
 </InitDemoBlock>
 
-<<< @/docs/.vuepress/components/gobang.vue
+<<< @/docs/.vuepress/components/case/gobang.vue

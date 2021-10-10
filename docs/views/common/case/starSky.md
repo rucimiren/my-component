@@ -14,7 +14,7 @@ tags:
 :::
 
 <InitDemoBlock>
-  <StarSky/>
+  <case-StarSky/>
 </InitDemoBlock>
 
-<<< @/docs/.vuepress/components/StarSky.vue
+<<< @/docs/.vuepress/components/case/StarSky.vue

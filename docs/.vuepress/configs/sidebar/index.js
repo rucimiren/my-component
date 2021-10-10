@@ -5,6 +5,7 @@ const commonCase = require('./commonCase')
 // const webDocumentES6 = require('./webDocumentES6')
 // const webDocumentGit = require('./webDocumentGit')
 const webDocument = require('./webDocument')
+const commonAnimation = require('./commonAnimation')
 
 module.exports = {
   ...components,
@@ -14,4 +15,5 @@ module.exports = {
   // ...webDocumentES6,
   // ...webDocumentGit,
   ...webDocument,
+  ...commonAnimation,
 }
