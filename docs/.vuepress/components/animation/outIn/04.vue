@@ -42,7 +42,7 @@ button {
     width: 400 * @Company;
     height: 400 * @Company;
     // background: #fff;
-    background: #000;
+    background: rgba(0, 0, 0, 0.8);
     transform: scale(1.4);
     top: 0;
     position: absolute;
