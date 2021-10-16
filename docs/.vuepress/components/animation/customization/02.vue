@@ -42,7 +42,8 @@ button {
   .main {
     width: 198px;
     height: 278px;
-    background-image: url('http://yaru.vip:8080/images/animation/customization/02/group01.png');
+    // background-image: url('http://yaru.vip:8080/images/animation/customization/02/group01.png');
+    background-image: url('http://yaru.vip:8080/images/family/12.jpg');
     background-size: 100% 100%;
     z-index: 1;
     transform: scale(0);

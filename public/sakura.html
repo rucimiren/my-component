@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakura</title>
+    <script src="http://yaru.vip:8080/js/sakura.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Sakura</h1>
+    <h2 style="text-align: center" id="time"></h2>
+
+    <script>
+      let sec = 5
+      let timer = null
+      timer = setInterval(() => {
+        time.innerHTML = `${sec}s后返回首页`
+        sec--
+        if (sec <= 0) {
+          clearInterval(timer)
+          query() && window.location.assign(query().targetUrl)
+          return
+        }
+      }, 1000)
+
+      function query() {
+        try {
+          return window.location.href
+            .split('?')[1]
+            .split('&')
+            .map(v => v.split('='))
+            .reduce((prev, next) => {
+              prev[next[0]] = next[1]
+              return prev
+            }, {})
+        } catch (error) {
+          console.log(error)
+          return false
+        }
+      }
+    </script>
+  </body>
+</html>
