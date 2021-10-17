@@ -1,16 +1,13 @@
 <template>
   <div>
-    <Utils />
+    <router-link to="/animate01">看我</router-link>
   </div>
 </template>
 
 <script>
-import Utils from '@/views/Utils/components/Utils'
 export default {
-  name: 'Index',
-  components: {
-    Utils,
-  },
+  name: 'MyComponentsIndex',
+
   data() {
     return {}
   },

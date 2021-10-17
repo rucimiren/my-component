@@ -6,4 +6,19 @@
   </div>
 </template>
 
-<style lang="less"></style>
+<style lang="less">
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+</style>
