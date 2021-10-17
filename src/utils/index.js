@@ -1,6 +1,14 @@
 import dayjs from 'dayjs'
 import numbers from 'number-precision'
 
+export function isFireworksCanvas(show) {
+  const fire = document.querySelector('#fireworksCanvas')
+  if (fire) {
+    fire.style.display = show
+  } else {
+    setTimeout(() => isFireworksCanvas(show), 0)
+  }
+}
 // 格式化日期
 export function formatDate(value, format = 'YYYY-MM-DD') {
   if (!value) return ''

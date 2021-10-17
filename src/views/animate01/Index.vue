@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div @click="$router.back()">返回</div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div
@@ -38,12 +39,14 @@
 </template>
 
 <script>
+import { isFireworksCanvas } from '@/utils'
 export default {
   name: 'Index',
   data() {
     return {}
   },
   mounted() {
+    isFireworksCanvas('')
     // eslint-disable-next-line
     var swiper = new Swiper('.swiper-container', {
       effect: 'cube',
@@ -62,6 +65,9 @@ export default {
         waitForTransition: false,
       },
     })
+  },
+  beforeDestroy() {
+    isFireworksCanvas('none')
   },
   methods: {},
 }
