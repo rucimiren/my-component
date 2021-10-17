@@ -24,8 +24,8 @@ window.root = new Vue({
   render: h => h(App),
 }).$mount('#app')
 
-/* setTimeout(() => {
+setTimeout(() => {
   window.location.assign(
     `${window.location.origin}/sakura.html?targetUrl=${window.location.href}`,
   )
-}, 5000) */
+}, 5000)
