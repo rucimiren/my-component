@@ -72,6 +72,11 @@ tags:
   link: http://www.txttool.com/t/?id=Mzgy
   name: Unicode编码解码
   desc: 在线中文Unicode编码解码网站
+
+- img:  http://yaru.vip:8080/images/horizontal/cartoon/DM_20210927165653_015.JPEG
+  link: https://www.bitbug.net/index.php
+  name: ico图标转换工具
+  desc: 在线制作ico图标
   
 ```
 :::

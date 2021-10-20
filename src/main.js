@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 import * as filters from './filters'
 
-// 仅在这里使用，不影响plugins和docs
 import './assets/css/index.css'
 
 // import xiao from './plugins'
@@ -24,8 +23,8 @@ window.root = new Vue({
   render: h => h(App),
 }).$mount('#app')
 
-setTimeout(() => {
+/* setTimeout(() => {
   window.location.assign(
     `${window.location.origin}/sakura.html?targetUrl=${window.location.href}`,
   )
-}, 5000)
+}, 5000) */

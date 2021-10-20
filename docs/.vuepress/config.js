@@ -13,6 +13,7 @@ module.exports = (options, ctx) => {
     dest: './root',  // 设置输出目录
     port: 8086,
     head: [
+      ['link', { rel: 'icon', href: 'http://yaru.vip:8080/images/ico/xiao/6.ico' }],
       ['script', { src: 'http://yaru.vip:8080/js/colorful.js' }],
       ['script', { src: 'http://yaru.vip:8080/js/sakura.js' }],
       ['script', { src: 'http://yaru.vip:8080/js/echarts.min.js' }],
@@ -34,7 +35,8 @@ module.exports = (options, ctx) => {
       }
     },
     themeConfig : {
-      logo: 'http://yaru.vip:8080/images/family/8.jpg',
+      // logo: 'http://yaru.vip:8080/images/family/8.jpg',
+      logo: 'http://yaru.vip:8080/images/ico/xiao/6.jpg',
       lastUpdated: '上次更新',
       smoothScroll: true,
       nav,
@@ -48,7 +50,7 @@ module.exports = (options, ctx) => {
     plugins,
     postcss: {
       plugins: [
-        require('tailwindcss'),
+        // require('tailwindcss'),
         require('autoprefixer')
       ]
     }
