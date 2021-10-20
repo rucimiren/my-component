@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Base from '@/views/Base/Index.vue'
+import Home from '@/views/home/Index.vue'
 
 Vue.use(VueRouter)
 
@@ -18,54 +18,14 @@ VueRouter.prototype.replace = function (location) {
 const routes = [
   {
     path: '/',
-    name: 'Base',
-    component: Base,
-    children: [
-      {
-        path: '/',
-        name: '/Utils',
-        component: () =>
-          import(/* webpackChunkName: "Utils" */ '../views/Utils/Index.vue'),
-      },
-      {
-        path: '/DatePicker',
-        name: 'DatePicker',
-        component: () =>
-          import(
-            /* webpackChunkName: "DatePicker" */ '../views/DatePicker/Index.vue'
-          ),
-      },
-      {
-        path: '/SerialAnimation',
-        name: 'SerialAnimation',
-        component: () =>
-          import(
-            /* webpackChunkName: "SerialAnimation" */ '../views/SerialAnimation/Index.vue'
-          ),
-      },
-      {
-        path: '/Icon',
-        name: 'Icon',
-        component: () =>
-          import(/* webpackChunkName: "Icon" */ '../views/Icon/Index.vue'),
-      },
-      {
-        path: '/Loading',
-        name: 'Loading',
-        component: () =>
-          import(
-            /* webpackChunkName: "Loading" */ '../views/Loading/Index.vue'
-          ),
-      },
-      {
-        path: '/Scrollbar',
-        name: 'Scrollbar',
-        component: () =>
-          import(
-            /* webpackChunkName: "Scrollbar" */ '../views/Scrollbar/Index.vue'
-          ),
-      },
-    ],
+    name: 'home',
+    component: Home,
+  },
+  {
+    path: '/animate01',
+    name: 'animate01',
+    component: () =>
+      import(/* webpackChunkName: "animate01" */ '@/views/animate01/Index.vue'),
   },
 ]
 

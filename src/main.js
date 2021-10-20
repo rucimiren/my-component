@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import * as filters from './filters'
+import 'lib-flexible/flexible'
 
 import './assets/css/index.css'
 
