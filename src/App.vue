@@ -5,12 +5,4 @@
     <router-view></router-view>
   </div>
 </template>
-<script>
-import { isFireworksCanvas } from '@/utils'
-export default {
-  mounted() {
-    isFireworksCanvas('none')
-  },
-}
-</script>
 <style lang="less"></style>

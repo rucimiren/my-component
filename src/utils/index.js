@@ -198,12 +198,3 @@ export const float2Fixed = (...args) => {
 
   return numbers.float2Fixed(...args)
 }
-
-export function isFireworksCanvas(show) {
-  const fire = document.querySelector('#fireworksCanvas')
-  if (fire) {
-    fire.style.display = show
-  } else {
-    setTimeout(() => isFireworksCanvas(show), 0)
-  }
-}

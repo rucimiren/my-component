@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import * as filters from './filters'
 import 'lib-flexible/flexible'
-
+import { isCanvas } from './utils/businessUtils'
 import './assets/css/index.css'
 
 // import xiao from './plugins'
@@ -16,6 +16,9 @@ Vue.use(xiao)
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
+
+Vue.prototype.$isCanvas = isCanvas
+
 Vue.config.productionTip = false
 
 window.root = new Vue({

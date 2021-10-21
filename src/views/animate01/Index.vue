@@ -2,36 +2,12 @@
   <div>
     <back />
     <div class="swiper-container">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" ref="swiperWrapper">
         <div
+          v-for="v in 19"
+          :key="v"
           class="swiper-slide"
-          style="
-            background-image: url(http://yaru.vip:8080/images/family/1.jpg);
-          "
-        ></div>
-        <div
-          class="swiper-slide"
-          style="
-            background-image: url(http://yaru.vip:8080/images/family/2.jpg);
-          "
-        ></div>
-        <div
-          class="swiper-slide"
-          style="
-            background-image: url(http://yaru.vip:8080/images/family/3.jpg);
-          "
-        ></div>
-        <div
-          class="swiper-slide"
-          style="
-            background-image: url(http://yaru.vip:8080/images/family/4.jpg);
-          "
-        ></div>
-        <div
-          class="swiper-slide"
-          style="
-            background-image: url(http://yaru.vip:8080/images/family/5.jpg);
-          "
+          :style="`background-image: url(http://yaru.vip:8080/images/family/${v}.jpg);`"
         ></div>
       </div>
     </div>
@@ -39,41 +15,60 @@
 </template>
 
 <script>
-import { isFireworksCanvas } from '@/utils'
 import back from '@/components/back.vue'
+// import { loadImg } from '@/utils/businessUtils'
+
 export default {
   name: 'Index',
   components: {
     back,
   },
   data() {
-    return {}
+    return {
+      imgList: [],
+    }
+  },
+  async created() {
+    /* this.imgList = await loadImg({
+      publicPath: 'http://yaru.vip:8080/images/family/',
+      count: 20,
+    })
+    console.log(this.imgList)
+    let swiperWrapper = this.$refs.swiperWrapper
+    this.imgList.forEach(v => {
+      const swiperSilde = document.createElement('div')
+      swiperSilde.className = 'swiper-slide'
+      swiperSilde.appendChild(v)
+      swiperWrapper.appendChild(swiperSilde)
+    })
+    this.swiper() */
   },
   mounted() {
-    isFireworksCanvas('')
-    // eslint-disable-next-line
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'cube',
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
-      loop: true,
-      autoplay: {
-        delay: 1000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-        waitForTransition: false,
-      },
-    })
+    this.swiper()
   },
-  beforeDestroy() {
-    isFireworksCanvas('none')
+  methods: {
+    swiper() {
+      // eslint-disable-next-line
+      new Swiper('.swiper-container', {
+        effect: 'cube',
+        grabCursor: true,
+        cubeEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+        loop: true,
+        speed: 1500,
+        autoplay: {
+          delay: 100,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          waitForTransition: false,
+        },
+      })
+    },
   },
-  methods: {},
 }
 </script>
 
@@ -88,7 +83,7 @@ export default {
   margin-top: -150px;
 }
 
-.swiper-slide {
+/deep/ .swiper-slide {
   background-position: center;
   background-size: cover;
 }
