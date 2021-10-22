@@ -1,7 +1,8 @@
 <template>
   <div class="switch__autoplay">
-    <div v-if="!switchplay" @click="switchAutoplay">自动播放</div>
-    <div v-else @click="switchAutoplay">手动播放</div>
+    <div @click="switchAutoplay">
+      {{ switchplay ? '手动播放' : '自动播放' }}
+    </div>
   </div>
 </template>
 
@@ -14,7 +15,7 @@ export default {
   },
   data() {
     return {
-      switchplay: '',
+      switchplay: true,
     }
   },
   watch: {
