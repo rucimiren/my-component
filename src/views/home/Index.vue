@@ -34,11 +34,15 @@ export default {
         },
         {
           component: 'animate04',
-          text: '卡片',
+          text: '卡片效果',
         },
         {
           component: 'animate05',
-          text: '渐变',
+          text: '渐变效果',
+        },
+        {
+          component: 'animate06',
+          text: '视差效果',
         },
       ],
     }

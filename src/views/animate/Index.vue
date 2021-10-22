@@ -10,6 +10,7 @@ import animate02 from '@/views/animate/components/animate02'
 import animate03 from '@/views/animate/components/animate03'
 import animate04 from '@/views/animate/components/animate04'
 import animate05 from '@/views/animate/components/animate05'
+import animate06 from '@/views/animate/components/animate06'
 export default {
   name: 'Index',
   components: {
@@ -18,6 +19,7 @@ export default {
     animate03,
     animate04,
     animate05,
+    animate06,
   },
   data() {
     return {
