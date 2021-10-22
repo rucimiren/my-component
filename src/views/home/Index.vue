@@ -5,7 +5,7 @@
         v-for="v in pageList"
         :key="v.path"
         class="home__item"
-        @click="$router.push(v.path)"
+        @click="$router.push(`/animate?animate=${v.component}`)"
       >
         {{ v.text }}
       </div>
@@ -21,32 +21,28 @@ export default {
     return {
       pageList: [
         {
-          path: '/animate01',
+          component: 'animate01',
           text: '3D方块',
         },
         {
-          path: '/animate02',
+          component: 'animate02',
           text: '3D滚动',
         },
         {
-          path: '/animate03',
+          component: 'animate03',
           text: '缩略图',
         },
         {
-          path: '/animate04',
+          component: 'animate04',
           text: '卡片',
         },
         {
-          path: '/animate05',
+          component: 'animate05',
           text: '渐变',
         },
       ],
     }
   },
-
-  mounted() {},
-
-  methods: {},
 }
 </script>
 

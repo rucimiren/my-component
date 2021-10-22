@@ -22,34 +22,10 @@ const routes = [
     component: Home,
   },
   {
-    path: '/animate01',
-    name: 'animate01',
+    path: '/animate',
+    name: 'animate',
     component: () =>
-      import(/* webpackChunkName: "animate01" */ '@/views/animate01/Index.vue'),
-  },
-  {
-    path: '/animate02',
-    name: 'animate02',
-    component: () =>
-      import(/* webpackChunkName: "animate02" */ '@/views/animate02/Index.vue'),
-  },
-  {
-    path: '/animate03',
-    name: 'animate03',
-    component: () =>
-      import(/* webpackChunkName: "animate03" */ '@/views/animate03/Index.vue'),
-  },
-  {
-    path: '/animate04',
-    name: 'animate04',
-    component: () =>
-      import(/* webpackChunkName: "animate04" */ '@/views/animate04/Index.vue'),
-  },
-  {
-    path: '/animate05',
-    name: 'animate05',
-    component: () =>
-      import(/* webpackChunkName: "animate05" */ '@/views/animate05/Index.vue'),
+      import(/* webpackChunkName: "animate" */ '@/views/animate/Index.vue'),
   },
 ]
 
