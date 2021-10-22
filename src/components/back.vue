@@ -25,14 +25,14 @@ export default {
     },
     color: {
       type: String,
-      default: '#2C68FF',
+      // default: '#2C68FF',
     },
     /*
       xq-icon-fanhui5 xq-icon-31fanhui1  xq-icon-fanhui  xq-icon-shangyiyehoutuifanhui-xianxingyuankuang
     */
     iconClass: {
       type: String,
-      default: 'xq-icon-fanhui5',
+      default: 'xq-icon-31fanhui1',
     },
   },
   data() {
@@ -56,21 +56,21 @@ export default {
   position: fixed;
   left: 10px;
   top: 10px;
-  border-radius: 50%;
   z-index: 9999999;
-  // overflow: hidden;
 
   img {
     width: 100%;
+    border-radius: 50%;
   }
   i {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 0px;
     cursor: pointer;
     background-image: -webkit-linear-gradient(bottom, red, #ff5f60, #f0c41b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    border-radius: 50%;
+    padding: 4px;
   }
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <back />
+    <switchAutoplay :autoplay="autoplay" :swiper="swiper" />
     <div class="swiper-container">
       <div class="swiper-wrapper" ref="swiperWrapper">
         <div
@@ -16,16 +17,20 @@
 
 <script>
 import back from '@/components/back.vue'
+import switchAutoplay from '@/components/switchAutoplay.vue'
 // import { loadImg } from '@/utils/businessUtils'
 
 export default {
   name: 'Index',
   components: {
     back,
+    switchAutoplay,
   },
   data() {
     return {
       imgList: [],
+      swiper: {},
+      autoplay: true,
     }
   },
   async created() {
@@ -44,12 +49,12 @@ export default {
     this.swiper() */
   },
   mounted() {
-    this.swiper()
+    this.swiperRender()
   },
   methods: {
-    swiper() {
+    swiperRender() {
       // eslint-disable-next-line
-      new Swiper('.swiper-container', {
+      this.swiper = new Swiper('.swiper-container', {
         effect: 'cube',
         grabCursor: true,
         cubeEffect: {
@@ -67,6 +72,7 @@ export default {
           waitForTransition: false,
         },
       })
+      !this.autoplay && this.swiper.autoplay.stop()
     },
   },
 }

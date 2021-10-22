@@ -1,7 +1,7 @@
 <template>
   <div class="switch__autoplay">
-    <div v-if="!switchPlay" @click="switchAutoplay(true)">自动播放</div>
-    <div v-else @click="switchAutoplay(false)">手动播放</div>
+    <div v-if="!switchplay" @click="switchAutoplay">自动播放</div>
+    <div v-else @click="switchAutoplay">手动播放</div>
   </div>
 </template>
 
@@ -9,11 +9,27 @@
 export default {
   name: 'Switchautoplay',
   props: {
-    switchPlay: Boolean,
+    swiper: Object,
+    autoplay: Boolean,
+  },
+  data() {
+    return {
+      switchplay: '',
+    }
+  },
+  watch: {
+    autoplay: {
+      handler(val) {
+        this.switchplay = val
+      },
+      immediate: true,
+    },
   },
   methods: {
-    switchAutoplay(show) {
-      this.$emit('update:switchPlay', show)
+    switchAutoplay() {
+      this.switchplay = !this.switchplay
+      if (this.switchplay) this.swiper.autoplay.start()
+      else this.swiper.autoplay.stop()
     },
   },
 }

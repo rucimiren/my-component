@@ -1,7 +1,7 @@
 <template>
   <div>
     <back />
-    <switchAutoplay :switchPlay.sync="autoplay" />
+    <switchAutoplay :autoplay="autoplay" :swiper="swiper" />
     <div class="swiper">
       <div class="swiper-wrapper">
         <div v-for="v in 19" :key="v" class="swiper-slide">
@@ -24,30 +24,17 @@ export default {
   },
   data() {
     return {
+      swiper: {},
       autoplay: true,
-      mySwiper: null,
     }
   },
   mounted() {
-    this.swiper()
-  },
-  watch: {
-    autoplay: {
-      handler(val) {
-        console.log(val, '000')
-        if (val) {
-          this.mySwiper && this.mySwiper.autoplay.start()
-        } else {
-          this.mySwiper.autoplay.stop()
-        }
-      },
-      immediate: true,
-    },
+    this.swiperRender()
   },
   methods: {
-    swiper() {
+    swiperRender() {
       // eslint-disable-next-line
-      this.mySwiper = new Swiper('.swiper', {
+      this.swiper = new Swiper('.swiper', {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
@@ -68,6 +55,7 @@ export default {
           waitForTransition: false,
         },
       })
+      !this.autoplay && this.swiper.autoplay.stop()
     },
   },
 }
