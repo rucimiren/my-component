@@ -59,10 +59,9 @@ export default {
   top: 50%;
   margin-left: -150px;
   margin-top: -150px;
-}
-
-/deep/ .swiper-slide {
-  background-position: center;
-  background-size: cover;
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
 }
 </style>

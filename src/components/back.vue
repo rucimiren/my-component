@@ -26,6 +26,7 @@ export default {
     color: {
       type: String,
       // default: '#2C68FF',
+      default: '#fff',
     },
     /*
       xq-icon-fanhui5 xq-icon-31fanhui1  xq-icon-fanhui  xq-icon-shangyiyehoutuifanhui-xianxingyuankuang
@@ -57,6 +58,7 @@ export default {
   left: 10px;
   top: 10px;
   z-index: 9999999;
+  opacity: 0.7;
 
   img {
     width: 100%;

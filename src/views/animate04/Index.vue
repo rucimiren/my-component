@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="animate04">
     <back />
-    <switchAutoplay :autoplay="autoplay" :swiper="swiper" />
-    <div class="swiper">
+    <switchAutoplay :autoplay="animate04Autoplay" :swiper="swiper" />
+    <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div v-for="v in 19" :key="v" class="swiper-slide">
-          <img :src="`http://yaru.vip:8080/images/family/${v}.jpg`" alt="" />
+        <div v-for="v in 17" :key="v" class="swiper-slide">
+          <img :src="`http://yaru.vip:8080/images/family/0/${v}.jpg`" alt="" />
         </div>
       </div>
     </div>
@@ -30,40 +30,36 @@ export default {
   methods: {
     swiperRender() {
       // eslint-disable-next-line
-      this.swiper = new Swiper('.swiper', {
-        effect: 'coverflow',
+      this.swiper = new Swiper('.mySwiper', {
+        effect: 'cards',
         grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
         ...this.swiperOptions,
       })
-      !this.autoplay && this.swiper.autoplay.stop()
+      !this.animate04Autoplay && this.swiper.autoplay.stop()
     },
   },
 }
 </script>
 
 <style lang="less" scoped>
-.swiper {
+.animate04 {
   width: 100%;
-  padding-top: 150px;
-  padding-bottom: 50px;
-  .swiper-slide {
-    width: 300px;
-    height: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .swiper {
+    width: 72%;
+    height: 62%;
+
     img {
+      border-radius: 10px;
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 8px;
     }
   }
 }

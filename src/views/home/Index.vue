@@ -22,15 +22,23 @@ export default {
       pageList: [
         {
           path: '/animate01',
-          text: 'animate01',
+          text: '3D方块',
         },
         {
           path: '/animate02',
-          text: 'animate02',
+          text: '3D滚动',
         },
         {
           path: '/animate03',
-          text: 'animate03',
+          text: '缩略图',
+        },
+        {
+          path: '/animate04',
+          text: '卡片',
+        },
+        {
+          path: '/animate05',
+          text: '渐变',
         },
       ],
     }

@@ -39,6 +39,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "animate03" */ '@/views/animate03/Index.vue'),
   },
+  {
+    path: '/animate04',
+    name: 'animate04',
+    component: () =>
+      import(/* webpackChunkName: "animate04" */ '@/views/animate04/Index.vue'),
+  },
+  {
+    path: '/animate05',
+    name: 'animate05',
+    component: () =>
+      import(/* webpackChunkName: "animate05" */ '@/views/animate05/Index.vue'),
+  },
 ]
 
 const router = new VueRouter({
