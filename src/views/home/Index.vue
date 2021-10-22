@@ -22,11 +22,15 @@ export default {
       pageList: [
         {
           path: '/animate01',
-          text: '看我',
+          text: 'animate01',
         },
         {
           path: '/animate02',
-          text: '看看我',
+          text: 'animate02',
+        },
+        {
+          path: '/animate03',
+          text: 'animate03',
         },
       ],
     }

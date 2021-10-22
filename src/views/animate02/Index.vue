@@ -15,6 +15,7 @@
 <script>
 import back from '@/components/back.vue'
 import switchAutoplay from '@/components/switchAutoplay.vue'
+import swiperMixins from '@/mixins/swiperMixins'
 
 export default {
   name: 'Index',
@@ -22,12 +23,7 @@ export default {
     back,
     switchAutoplay,
   },
-  data() {
-    return {
-      swiper: {},
-      autoplay: true,
-    }
-  },
+  mixins: [swiperMixins],
   mounted() {
     this.swiperRender()
   },
@@ -46,14 +42,7 @@ export default {
           modifier: 1,
           slideShadows: true,
         },
-        loop: true,
-        speed: 1500,
-        autoplay: {
-          delay: 50,
-          stopOnLastSlide: false,
-          disableOnInteraction: false,
-          waitForTransition: false,
-        },
+        ...this.swiperOptions,
       })
       !this.autoplay && this.swiper.autoplay.stop()
     },

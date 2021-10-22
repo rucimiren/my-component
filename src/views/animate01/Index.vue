@@ -18,7 +18,7 @@
 <script>
 import back from '@/components/back.vue'
 import switchAutoplay from '@/components/switchAutoplay.vue'
-// import { loadImg } from '@/utils/businessUtils'
+import swiperMixins from '@/mixins/swiperMixins'
 
 export default {
   name: 'Index',
@@ -26,28 +26,7 @@ export default {
     back,
     switchAutoplay,
   },
-  data() {
-    return {
-      imgList: [],
-      swiper: {},
-      autoplay: true,
-    }
-  },
-  async created() {
-    /* this.imgList = await loadImg({
-      publicPath: 'http://yaru.vip:8080/images/family/',
-      count: 20,
-    })
-    console.log(this.imgList)
-    let swiperWrapper = this.$refs.swiperWrapper
-    this.imgList.forEach(v => {
-      const swiperSilde = document.createElement('div')
-      swiperSilde.className = 'swiper-slide'
-      swiperSilde.appendChild(v)
-      swiperWrapper.appendChild(swiperSilde)
-    })
-    this.swiper() */
-  },
+  mixins: [swiperMixins],
   mounted() {
     this.swiperRender()
   },
@@ -63,14 +42,7 @@ export default {
           shadowOffset: 20,
           shadowScale: 0.94,
         },
-        loop: true,
-        speed: 1500,
-        autoplay: {
-          delay: 100,
-          stopOnLastSlide: false,
-          disableOnInteraction: false,
-          waitForTransition: false,
-        },
+        ...this.swiperOptions,
       })
       !this.autoplay && this.swiper.autoplay.stop()
     },
