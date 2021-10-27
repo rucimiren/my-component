@@ -10,13 +10,17 @@
         {{ v.text }}
       </div>
     </div>
+    <Audio />
   </div>
 </template>
 
 <script>
+import Audio from '@/components/audio'
 export default {
   name: 'Index',
-
+  components: {
+    Audio,
+  },
   data() {
     return {
       pageList: [
