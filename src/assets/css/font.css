@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'font-zqdnhs';
+  font-display: swap;
+  src: url('../font/zqdnhs/zqdnhs.TTF') format('truetype');
+}
+
+.font-zqdnhs {
+  font-family: font-zqdnhs;
+}

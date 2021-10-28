@@ -8,10 +8,10 @@ import { isCanvas } from './utils/businessUtils'
 import './assets/css/index.css'
 
 // import xiao from './plugins'
-import xiao from '@rucimiren/xiao-ui'
-import '@rucimiren/xiao-ui/lib/xiao.css'
+// import xiao from '@rucimiren/xiao-ui'
+// import '@rucimiren/xiao-ui/lib/xiao.css'
 
-Vue.use(xiao)
+// Vue.use(xiao)
 
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
