@@ -48,7 +48,12 @@ export default {
     font-size: 20px;
     margin-bottom: 0px;
     cursor: pointer;
-    background-image: -webkit-linear-gradient(bottom, red, #ff5f60, #f0c41b);
+    // background-image: -webkit-linear-gradient(bottom, red, #ff5f60, #f0c41b);
+    background-image: linear-gradient(
+      to right,
+      rgb(238, 9, 121),
+      rgb(255, 106, 0)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

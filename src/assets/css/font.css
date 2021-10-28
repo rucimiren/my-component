@@ -7,3 +7,14 @@
 .font-zqdnhs {
   font-family: font-zqdnhs;
 }
+
+@font-face {
+  font-family: 'font-BreatheFireIii-PKLOB';
+  font-display: swap;
+  src: url('../font/BreatheFireIii-PKLOB/BreatheFireIii-PKLOB.ttf')
+    format('truetype');
+}
+
+.font-BreatheFireIii-PKLOB {
+  font-family: font-BreatheFireIii-PKLOB;
+}
