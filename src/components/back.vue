@@ -1,5 +1,5 @@
 <template>
-  <div class="back" @click="$router.back()">
+  <div class="back" @click="$router.push('/')">
     <img
       v-if="type === 'IMG'"
       src="http://yaru.vip:8080/images/icon/back/back3.png"

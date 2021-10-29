@@ -1,13 +1,12 @@
 <template>
   <div class="animate06">
-    <back />
     <switchAutoplay :autoplay="autoplay" :swiper="swiper" />
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div v-for="v in 17" :key="v" class="swiper-slide">
+        <div v-for="v in imgList" :key="v.src" class="swiper-slide">
           <div
             class="slide-inner"
-            :style="`background-image: url(http://yaru.vip:8080/images/family/0/${v}.jpg);`"
+            :style="`background-image: url(${v.src});`"
           ></div>
         </div>
       </div>
@@ -16,14 +15,13 @@
 </template>
 
 <script>
-import back from '@/components/back.vue'
 import switchAutoplay from '@/components/switchAutoplay.vue'
 import swiperMixins from '@/mixins/swiperMixins'
 
 export default {
   name: 'Index',
+  props: ['imgList'],
   components: {
-    back,
     switchAutoplay,
   },
   mixins: [swiperMixins],

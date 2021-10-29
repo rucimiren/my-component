@@ -22,6 +22,6 @@ export function isCanvas(element, show) {
   if (ele) {
     ele.style.display = show
   } else {
-    setTimeout(() => isCanvas(show), 0)
+    setTimeout(() => isCanvas(element, show), 0)
   }
 }
