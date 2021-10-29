@@ -1,5 +1,5 @@
 <template>
-  <div class="audio">
+  <div class="audio" ref="audio">
     <div class="audio__icon" @click="toggle">
       <i class="iconfont xq-icon-yinleliebiao"></i>
     </div>
@@ -55,6 +55,16 @@ export default {
   mounted() {
     this.domList = this.musicList.map(v => {
       return this.$refs[v.en][0]
+    })
+    window.addEventListener('click', e => {
+      const isContains = this.$refs.audio?.contains(e.target)
+      !isContains &&
+        (async () => {
+          this.$refs.audioMusic.style.opacity = '0'
+          await delay(400)
+          this.$refs.audioMusic.style.display = 'none'
+          this.show && (this.show = !this.show)
+        })()
     })
   },
 

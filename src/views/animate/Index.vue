@@ -1,6 +1,6 @@
 <template>
   <div>
-    <components :is="animate" />
+    <components :is="$route.query.animate" />
   </div>
 </template>
 
@@ -22,9 +22,7 @@ export default {
     animate06,
   },
   data() {
-    return {
-      animate: this.$route.query.animate,
-    }
+    return {}
   },
 
   mounted() {},

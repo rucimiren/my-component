@@ -14,7 +14,7 @@
   ],
   "author": "rucimiren",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "doc": "vuepress dev docs",

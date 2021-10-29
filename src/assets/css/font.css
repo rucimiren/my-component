@@ -18,3 +18,13 @@
 .font-BreatheFireIii-PKLOB {
   font-family: font-BreatheFireIii-PKLOB;
 }
+
+@font-face {
+  font-family: 'font-OzCaramel';
+  font-display: swap;
+  src: url('../font/OzCaramel/OzCaramel.ttf') format('truetype');
+}
+
+.font-OzCaramel {
+  font-family: font-OzCaramel;
+}
