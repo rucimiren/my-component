@@ -1,21 +1,31 @@
 <template>
   <div class="audio" ref="audio">
-    <div class="audio__icon" @click="toggle">
-      <i class="iconfont xq-icon-yinleliebiao"></i>
-    </div>
-    <div class="audio__music" ref="audioMusic">
-      <div v-for="(v, i) in musicList" :key="i" @click="handler(i)">
-        <span class="audio__music-name">{{ v.zh }}</span>
-        <!--autoplay controls loop preload-->
-        <audio
-          :src="`http://yaru.vip:8080/music/${v.en}.mp3`"
-          :ref="v.en"
-          :autoplay="i === 0"
-          preload
-          loop
-        ></audio>
+    <template v-if="type === 'list'">
+      <div class="audio__icon" @click="toggle">
+        <i class="iconfont xq-icon-yinleliebiao"></i>
       </div>
-    </div>
+      <div class="audio__music" ref="audioMusic">
+        <div v-for="(v, i) in musicList" :key="i" @click="handler(i)">
+          <span class="audio__music-name">{{ v.zh }}</span>
+          <!--autoplay controls loop preload-->
+          <audio
+            :src="`http://yaru.vip:8080/music/${v.en}.mp3`"
+            :ref="v.en"
+            :autoplay="i === 0"
+            preload
+            loop
+          ></audio>
+        </div>
+      </div>
+    </template>
+    <template v-else>
+      <audio
+        src="http://yaru.vip:8080/music/shiqisui.mp3"
+        autoplay
+        preload
+        loop
+      ></audio>
+    </template>
   </div>
 </template>
 
@@ -23,7 +33,9 @@
 import { delay } from '@/utils'
 export default {
   name: 'Audio',
-
+  props: {
+    type: String,
+  },
   data() {
     return {
       audio: null,
@@ -53,6 +65,8 @@ export default {
   },
 
   mounted() {
+    if (this.type !== 'list') return
+
     this.domList = this.musicList.map(v => {
       return this.$refs[v.en][0]
     })

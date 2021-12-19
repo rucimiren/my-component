@@ -73,6 +73,54 @@ export function loadImg({
   return Promise.all([...result, ...syncResult])
 }
 
+/**
+ *
+ * publicPath: ''
+ * format: 'jpg'
+ * count: 18
+ *
+ *
+ */
+export function loadImgNew(list) {
+  let allResult = []
+  list.forEach(v => {
+    let result = []
+    if (typeof v.count === 'number') {
+      for (let i = 0; i < v.count; i++) {
+        result.push(
+          new Promise(rs => {
+            const img = new Image()
+            img.onload = () => {
+              rs(img)
+            }
+            const src = `${v.publicPath}${i}.${v.format}`
+            img.src = src
+          }),
+        )
+      }
+    }
+
+    if (Array.isArray(v.count)) {
+      for (let i = 0; i < v.count.length; i++) {
+        result.push(
+          new Promise(rs => {
+            const img = new Image()
+            img.onload = () => {
+              rs(img)
+            }
+            const src = `${v.publicPath}${v.count[i]}.${v.format}`
+            img.src = src
+          }),
+        )
+      }
+    }
+
+    allResult = [...allResult, ...result]
+  })
+
+  return Promise.all(allResult)
+}
+
 // 是否显示特效
 export function isCanvas(element, show) {
   const ele = document.querySelector(element)
