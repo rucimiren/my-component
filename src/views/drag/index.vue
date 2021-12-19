@@ -209,7 +209,7 @@ export default {
       // 最终索引
       let indexEnd = ''
       if (indexY === 0) {
-        indexEnd = indexY
+        indexEnd = indexX
       } else if (indexY === 1) {
         indexEnd = indexX + col
       }
