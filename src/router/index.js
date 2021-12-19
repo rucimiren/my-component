@@ -27,6 +27,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "animate" */ '@/views/animate/Index.vue'),
   },
+  {
+    path: '/drag',
+    name: 'drag',
+    component: () =>
+      import(/* webpackChunkName: "drag" */ '@/views/drag/index.vue'),
+  },
 ]
 
 const router = new VueRouter({
